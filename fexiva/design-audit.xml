@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<design_audit site="Fexiva" url="https://fexiva.webflow.io" type="Webflow Template" category="Finance / Fintech App">
+  <meta>
+    <title>Fexiva - Finance Webflow Template</title>
+    <description>Modern finance/fintech template with green accent theme, mobile app mockups, clean professional UI for expense tracking, payments, business finance.</description>
+    <theme>Dark with Green accents</theme>
+    <page_height_approx>10947px</page_height_approx>
+  </meta>
+
+  <design_system>
+    <colors>
+      <color name="primary-green" value="Teal/Green gradient (#00something to darker)" usage="Hero bg gradient, accents, CTAs"/>
+      <color name="bg-dark" value="Near black / deep green-black" usage="Overall bg"/>
+      <color name="card-bg" value="Dark translucent / glass" usage="UI cards, phone mockup elements"/>
+      <color name="text-white" value="#ffffff"/>
+      <color name="accent" value="Bright teal/cyan for highlights, balances, icons"/>
+      <color name="muted" value="Grayish for secondary text"/>
+    </colors>
+    <typography>
+      <font_family>Clean modern sans-serif (Inter or similar)</font_family>
+      <headings>Large bold white headings, e.g. "Finance Built For Modern Businesses."</headings>
+      <body>Readable white/muted on dark</body>
+    </typography>
+    <effects>
+      <gradients>Strong green radial/linear gradient on hero</gradients>
+      <mockups>High-fidelity smartphone UI mockups showing app screens (balance, cards, transactions, quick actions)</mockups>
+      <glass>Frosted glass cards and overlays</glass>
+    </effects>
+  </design_system>
+
+  <sections>
+    <section name="Navigation">
+      <description>Centered or top: Logo (Fexiva with lightning bolt icon) in dark pill, menu links (Home, About, Features, Pricing, Blog), right "Get started" pill button with green accent.</description>
+    </section>
+
+    <section name="Hero">
+      <description>Green gradient bg. Left: Large white heading "Finance Built For Modern Businesses.", subtext about managing expenses, "Get started" button, avatar group "OK Satisfied Users". Center/right: Hand holding smartphone showing detailed finance app UI (balance $24,650.00, cards, transactions list, quick actions icons, overview cards). Floating UI cards on sides for total balance, actions.</description>
+      <key_visual>Realistic phone mockup with dark UI, green accents on positive numbers, icons.</key_visual>
+    </section>
+
+    <section name="Features / Benefits">
+      <description>Sections showcasing app features: expense tracking, cards management, analytics, transfers etc. with icons, screenshots, descriptions. Card-based or split layouts.</description>
+    </section>
+
+    <section name="Additional">
+      <description>Pricing, testimonials, blog, CTA sections, consistent green accents on dark.</description>
+    </section>
+
+    <section name="Footer">Standard dark footer.</section>
+  </sections>
+
+  <recreation_notes>
+    - Dominant green/teal gradient hero.
+    - High quality mobile app mockups as central visual.
+    - Dark theme with glassmorphism cards.
+    - Clean, modern fintech aesthetic focused on clarity and trust.
+    - Extract exact greens and fonts from live DevTools for pixel match.
+  </recreation_notes>
+</design_audit>
