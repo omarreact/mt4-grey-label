@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<design_audit site="Flowvy" url="https://flowvy-template.webflow.io" type="Webflow Template" category="Project Management / Workflow SaaS">
+  <meta>
+    <title>Flowvy - Project Management Template</title>
+    <description>Light, soft purple/lavender theme for workflow/project management tool. Clean, airy, modern SaaS design with rounded elements.</description>
+    <theme>Light Purple / Soft Pastel</theme>
+  </meta>
+
+  <design_system>
+    <colors>
+      <color name="primary-purple" value="#6B21A8 / deep purple to lavender" usage="Headings, accents, buttons"/>
+      <color name="bg" value="Soft lavender / light purple gradient with clouds/soft light"/>
+      <color name="nav-bg" value="White / light translucent pill"/>
+      <color name="text-dark" value="Deep purple / dark"/>
+      <color name="button" value="Deep purple pill"/>
+    </colors>
+    <typography>
+      <font_family>Clean modern sans</font_family>
+      <headings>Large gradient or solid purple "The Fastest Way to Rearrange Your Project"</headings>
+      <body>Dark purple/gray on light bg</body>
+    </typography>
+    <effects>
+      <background>Soft light purple with subtle cloud or gradient blobs</background>
+      <nav>Floating white rounded nav bar</nav>
+      <buttons>Deep purple rounded pills</buttons>
+    </effects>
+  </design_system>
+
+  <sections>
+    <section name="Navigation">
+      <description>Centered floating white/light pill nav: Logo (purple hexagon + Flowvy), links (Features, How it Works, Pricing, Testimonials, FAQs), right dark purple "Get Started".</description>
+    </section>
+
+    <section name="Hero">
+      <description>Soft purple bg. Centered badge "Updated Optimizing Workflow Better Than Ever". Large purple heading. Subtext about project management. Clean, minimal, airy layout.</description>
+    </section>
+
+    <section name="Features">
+      <description>How it works steps, feature cards, pricing, testimonials, FAQs. Consistent soft light theme with purple accents.</description>
+    </section>
+  </sections>
+
+  <recreation_notes>
+    - Soft light lavender/purple aesthetic (opposite of the dark templates).
+    - Floating rounded navigation.
+    - Clean, friendly, productivity-focused design.
+    - Gradient text possible on headings.
+    - High whitespace, soft shadows.
+  </recreation_notes>
+</design_audit>
