@@ -1,4 +1,43 @@
-# MT4 Grey Label — Source-driven redesign (v3)
+# MT4 & MT5 Grey Label — Homepage Design Showcase
+
+**Live design index:** https://omarreact.github.io/mt4-grey-label/
+
+Browse **11 independent, responsive homepages** with their own visual styles. The index provides searchable cards, filters by collection, and an on-demand desktop/mobile live preview.
+
+## Five original concepts
+
+| Homepage | Live preview | Source |
+| --- | --- | --- |
+| Obsidian Exchange | [Open](https://omarreact.github.io/mt4-grey-label/originals/obsidian/) | `originals/obsidian/index.html` |
+| Atelier Capital | [Open](https://omarreact.github.io/mt4-grey-label/originals/atelier/) | `originals/atelier/index.html` |
+| Gridlock | [Open](https://omarreact.github.io/mt4-grey-label/originals/gridlock/) | `originals/gridlock/index.html` |
+| Northstar OS | [Open](https://omarreact.github.io/mt4-grey-label/originals/northstar/) | `originals/northstar/index.html` |
+| Pulseworks | [Open](https://omarreact.github.io/mt4-grey-label/originals/pulseworks/) | `originals/pulseworks/index.html` |
+
+## Six Webflow-inspired editions
+
+| Homepage | Live preview | Source |
+| --- | --- | --- |
+| TradeNova | [Open](https://omarreact.github.io/mt4-grey-label/tradenova/) | `tradenova/index.html` |
+| Fyntic | [Open](https://omarreact.github.io/mt4-grey-label/fyntic/) | `fyntic/index.html` |
+| Fexiva | [Open](https://omarreact.github.io/mt4-grey-label/fexiva/) | `fexiva/index.html` |
+| Ideck | [Open](https://omarreact.github.io/mt4-grey-label/ideck/) | `ideck/index.html` |
+| Kickgent | [Open](https://omarreact.github.io/mt4-grey-label/kickgent/) | `kickgent/index.html` |
+| Flowvy | [Open](https://omarreact.github.io/mt4-grey-label/flowvy/) | `flowvy/index.html` |
+
+## Architecture and deployment
+
+- Each page is independent and self-contained with inline HTML, CSS, and vanilla JavaScript.
+- `index.html` at the repository root is the **11-design showcase**.
+- Six reference-edition folders retain their `design-audit.xml` files.
+- Existing root-level compatibility links and `.nojekyll` remain intact.
+- GitHub Pages publishes from `main`; commits trigger its existing build-and-deploy workflow.
+- The gallery's previews load their corresponding pages on demand, so opening the gallery does not immediately load eleven iframes.
+
+---
+
+## Archived notes from the earlier six-design gallery
+
 
 ## Standalone design folders
 
