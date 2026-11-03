@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<design_audit site="Fyntic" url="https://fyntic.webflow.io" type="Webflow Template" category="AI Agency / AI Solutions">
+  <meta>
+    <title>Fyntic - AI Agency Webflow Template</title>
+    <description>Modern Webflow template for AI agencies, AI startups, technology companies, automation businesses. Dark space-themed UI with blue accents, fully responsive, CMS-ready.</description>
+    <primary_font>Likely Inter or similar modern sans (confirm via DevTools)</primary_font>
+    <theme>Dark / Cosmic</theme>
+    <page_height_approx>16408px</page_height_approx>
+  </meta>
+
+  <design_system>
+    <colors>
+      <color name="body-background" value="#040208" usage="Main dark bg"/>
+      <color name="primary" value="#1452fc" usage="Brand blue, CTAs, accents"/>
+      <color name="secondary" value="#4476ff" usage="Lighter blue, gradients"/>
+      <color name="heading" value="white" usage="Main headings"/>
+      <color name="body-text" value="white / muted" usage="Body copy"/>
+      <color name="gradient-from" value="#1452fc"/>
+      <color name="gradient-to" value="#4476ff"/>
+      <color name="overlay-white" values="#ffffff14, #ffffff21, #ffffff4d, #ffffff80, #ffffffe6 etc." usage="Glass overlays, borders"/>
+      <color name="box-shadow" value="#4476ffcc" usage="Blue glows"/>
+      <color name="black" value="black"/>
+      <color name="white" value="white"/>
+    </colors>
+
+    <typography>
+      <font_family name="primary">Modern sans-serif (Inter-like or system)</font_family>
+      <scale>
+        <type name="h1" size="~65px / large" weight="bold/semibold" color="white"/>
+        <type name="body" size="base" color="muted white"/>
+        <type name="button" size="medium" weight="medium"/>
+      </scale>
+      <notes>Large bold headlines, clean readable body. High contrast white on dark.</notes>
+    </typography>
+
+    <spacing_and_layout>
+      <notes>Generous section padding, centered content max-widths, card grids with consistent gaps. Pill-shaped nav and buttons common.</notes>
+      <border_radius>Large rounded (pills for nav/CTAs, rounded cards ~12-16px+)</border_radius>
+    </spacing_and_layout>
+
+    <effects>
+      <glow>Strong blue radial glows and particle/star field backgrounds</glow>
+      <illustrations>3D AI elements: glowing orb, human/robot hands reaching to central AI sphere, particle effects</illustrations>
+      <overlays>Semi-transparent white overlays for depth</overlays>
+    </effects>
+  </design_system>
+
+  <sections>
+    <section name="Navigation">
+      <description>Top nav: Logo (Fyntic. with blue icon) left. Center pill-shaped dark nav bar with links (Home, Pages, Services, Projects, Contact). Right: Sign in / Register text + blue "Get Started" pill button.</description>
+      <responsive>Mobile hamburger or stacked.</responsive>
+    </section>
+
+    <section name="Hero">
+      <description>Deep space/dark bg with subtle stars/particles. Centered badge "New Automated AI Agent Service". Massive white heading "The #1 AI Agent for All your Customer Services". Subtext. Dual CTAs: white outline "See Pricing Plans" + solid blue "Get In Touch". Avatar group + "Trusted by over +5K People in the Multiverse". Feature tags/pills below (Custom AI Solutions, Scalable Intelligence, etc. with checkmarks). Central 3D illustration of human and robot hands touching a glowing blue AI orb/sphere with rings.</description>
+      <key_visual>Glowing blue core with orbital rings, particle effects, hands reaching in.</key_visual>
+    </section>
+
+    <section name="Services / Features">
+      <description>Sections for AI Strategy & Consulting, AI Content Creation, AI Agent Development, AI Process Automation. Card grid with icons, titles, short descriptions, "Read More" links. Dark cards with subtle borders/glows.</description>
+    </section>
+
+    <section name="Social Proof / Logos">
+      <description>Logo strip "Join Over 1500+ Businesses Already Growing With Fyntic" with Logoipsum style logos.</description>
+    </section>
+
+    <section name="Additional">
+      <description>Further sections for projects, pricing, testimonials, team, blog/CMS, contact form. Consistent dark theme with blue accents and modern card-based layouts.</description>
+    </section>
+
+    <section name="Footer">
+      <description>Multi-column footer matching dark theme, logo, links, socials, copyright.</description>
+    </section>
+  </sections>
+
+  <responsive_breakpoints>
+    <desktop>Wide layouts, large hero illustration, multi-col grids</desktop>
+    <tablet>Adjusted columns, scaled hero</tablet>
+    <mobile>Single column stack, full-width CTAs, simplified nav</mobile>
+  </responsive_breakpoints>
+
+  <recreation_notes>
+    - Primary blue #1452fc / #4476ff.
+    - Near-black bg #040208.
+    - Heavy use of blue glows, particles, 3D AI imagery.
+    - Pill-shaped interactive elements.
+    - High-contrast white text.
+    - For exact match: extract full CSS variables and computed styles from live page; use Webflow or recreate with similar modern AI aesthetic.
+    - Animations: subtle particle movement, glow pulses, scroll reveals.
+  </recreation_notes>
+</design_audit>
