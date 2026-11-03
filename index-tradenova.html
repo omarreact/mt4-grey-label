@@ -40,6 +40,18 @@
 @media(max-width:620px){.wrap{width:calc(100% - 36px)}.section{padding-block:74px}.section-header{margin-bottom:33px}.hero{padding-top:62px}.hero h1{font-size:clamp(2.7rem,11vw,4.05rem);line-height:1.06}.hero-lead{font-size:1rem;margin-top:23px}.hero-actions{gap:10px;margin-top:27px}.hero-actions .btn{width:100%}.hero-visual{height:330px;margin-top:8px}.hero-art{object-fit:contain}.hero-caption{font-size:.55rem;letter-spacing:.09em}.cap-inner{align-items:flex-start;flex-direction:column;gap:15px;padding-block:19px}.cap-items{gap:12px 18px}.cap-items i{display:none}.cap-items span{font-size:.83rem}.intro-grid{gap:25px}.intro-copy{padding-left:18px;gap:16px}.service-grid,.process-grid,.audience-grid,.why-points,.technology-list{grid-template-columns:1fr}.service-card,.service-card--featured,.process-card,.process-card:nth-child(4),.process-card:nth-child(5),.audience-card,.audience-card:last-child{grid-column:auto}.service-card{min-height:235px;padding:25px}.service-card--featured{min-height:330px}.service-card--featured .service-copy{max-width:64%}.service-card--featured .service-copy p{font-size:.84rem}.mini-terminal{width:40%;right:-24px;height:55%}.process-card{min-height:270px}.process-card h3{margin-top:90px}.process-orb{width:120px;height:120px;top:18px;right:24px}.why-point{min-height:77px}.tech-diagram{min-height:320px}.tech-orbit{width:290px}.tech-center{width:115px;height:115px}.tech-center strong{font-size:1.8rem}.tech-node{width:53px;height:53px;font-size:.58rem}.compare-panel{padding:20px 15px}.compare-head{gap:10px}.compare-emblem{font-size:2rem}th,td{padding:14px 15px}.faq-item summary{gap:11px}.faq-question{font-size:.95rem}.faq-answer{padding:0 22px 24px 35px}.audience-card{min-height:285px}.audience-number{margin-bottom:40px}.footer-top,.footer-bottom{flex-direction:column}.footer-nav{justify-content:flex-start}.cta-surface{border-radius:20px}.btn{min-height:52px}.back-top{right:14px;bottom:15px}}
 @media(max-width:390px){.wrap{width:calc(100% - 28px)}.brand-mark{width:34px;height:34px}.brand-copy strong{font-size:.89rem}.brand-copy small{font-size:.52rem}.hero h1{font-size:clamp(2.35rem,11vw,2.65rem)}.hero-visual{height:280px}.service-card--featured .service-copy{max-width:68%}.service-card--featured .service-copy h3{font-size:1.15rem}.mini-terminal{opacity:.5}.hero-caption{white-space:normal;width:100%;text-align:center}.compare-emblem{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.js .reveal{opacity:1;transform:none}.hero-art{animation:none}}
+
+/* Review-only reference comparison bar; does not alter the approved homepage copy. */
+.reference-review-bar{position:relative;z-index:21;background:#101829;border-bottom:1px solid rgba(156,182,252,.22);color:#dce7ff}
+.reference-review-bar .wrap{min-height:58px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 22px;padding-top:9px;padding-bottom:9px}
+.reference-review-copy{display:flex;align-items:center;flex-wrap:wrap;gap:9px;font-size:.83rem;line-height:1.5;color:#aebfe7}
+.reference-review-copy strong{color:#f3f6ff;font-weight:750}
+.reference-review-dot{width:8px;height:8px;border-radius:50%;background:#8ab0ff;box-shadow:0 0 0 4px rgba(138,176,255,.15)}
+.reference-review-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:35px;padding:7px 13px;background:#202e4b;color:#f9fbff;border:1px solid #607ab1;border-radius:8px;white-space:normal;text-align:center;font-size:.82rem;font-weight:750;transition:background .2s ease,transform .2s ease,border-color .2s ease}
+.reference-review-link:hover{background:#334b79;border-color:#97b8ff;transform:translateY(-1px)}
+.reference-review-link:focus-visible{outline:3px solid #93e0ff;outline-offset:3px}
+@media(max-width:560px){.reference-review-bar .wrap{justify-content:center;text-align:center;padding-top:12px;padding-bottom:12px}.reference-review-copy{justify-content:center}.reference-review-link{width:100%}}
+@media(prefers-reduced-motion:reduce){.reference-review-link{transition:none}.reference-review-link:hover{transform:none}}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -56,6 +68,12 @@
   <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open navigation menu"><span aria-hidden="true"></span></button>
  </div>
 </header>
+<aside class="reference-review-bar" aria-label="Original design reference">
+ <div class="wrap">
+  <div class="reference-review-copy"><span class="reference-review-dot" aria-hidden="true"></span><strong>Design comparison</strong><span>Our MT4 Grey Label homepage is adapted from the TradeNova visual reference.</span></div>
+  <a class="reference-review-link" href="https://tradenova-site.webflow.io/" target="_blank" rel="noopener noreferrer" aria-label="Open the original TradeNova Webflow reference in a new tab">View original TradeNova reference <span aria-hidden="true">↗</span></a>
+ </div>
+</aside>
 <main id="main-content">
  <section class="hero" id="home" aria-labelledby="hero-title"><div class="page-grid" aria-hidden="true"></div><div class="wrap">
   <span class="eyebrow"><span class="eyebrow-mark"></span>Platform | CRM | Plugins | Support</span>
