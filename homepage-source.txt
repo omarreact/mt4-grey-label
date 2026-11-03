@@ -1,0 +1,127 @@
+Meta Title: MT4 and MT5 Grey Label Solutions for Forex Brokers
+Meta Description: Launch and scale your forex brokerage with MT4 and MT5 grey label solutions, broker CRM, PAMM and MAM plugins and liquidity connectivity.
+H1: MT4 & MT5 Grey Label Solutions for Forex Brokers
+MT4 and MT5 grey label, CRM, PAMM and MAM plugins, liquidity connectivity and broker websites, brought together by one technology partner.
+Platform | CRM | Plugins | Support
+Ask ten traders which platform they use and you'll hear MetaTrader again and again. Some swear by MT4 and the expert advisors they've built up over years. Others have moved to MT5 for its wider markets and newer tools. A brokerage that can offer either, under its own name, starts with an advantage.
+A forex grey label makes that possible without holding a platform licence yourself. Your brokerage runs on an established MetaTrader server, while you manage your own traders, groups and conditions. We set that up and connect the systems a working brokerage depends on, from the CRM and plugins to liquidity, website and hosting.
+H2: More Systems Than Most Founders Expect
+The platform is the part everyone thinks about first. Then the list grows.
+You need a CRM to sign clients up, verify them and track their money. Plugins if you want to offer managed accounts. A liquidity connection if trades are going to the market. A website that turns visitors into registrations. Hosting to keep it all running.
+There's another wrinkle that catches people out. Whether you can offer MT4 or MT5 at all depends on who holds the licence. The platform vendor stopped issuing new MT4 licences years ago and has been selective about newer arrangements too. In practice, your options depend on the licence holders you work with and their current terms.
+That's a lot to coordinate. It's also exactly what we do.
+H2: What We Offer
+H3: MT4 Grey Label
+Give your traders the platform many of them already know, with your brand on the client side and manager control over accounts, leverage, spreads and groups.
+H3: MT5 Grey Label
+MetaTrader 5 for brokers who want multi-asset trading, more timeframes and more order types, either alone or alongside MT4.
+H3: Forex Broker CRM
+Registration, KYC, deposits, withdrawals, trading account creation and IB management in one back office, linked to MT4 and MT5 through the manager API.
+H3: PAMM / MAM Plugin
+Let money managers trade for several investors at once, with allocation, fees and investor reporting handled automatically.
+H3: Liquidity and Bridge
+Connect your platform to liquidity providers with routing rules that suit your execution model, whether A-book, B-book or a mix.
+H3: Broker Website
+A site built for a brokerage, with account opening tied to your CRM, platform downloads and the legal pages you need.
+H2: Why Choose a Forex Grey Label Route With Us
+A grey label is generally a quicker and lower-cost way into the market than securing a platform licence directly, which for MT4 isn't an option for new applicants anyway. You avoid licence fees, server costs and the specialist staff a direct setup needs.
+What sets one provider apart from another is everything around the platform:
+Configuration based on your clients, markets and trading model
+A CRM, plugins, liquidity and website connected as one system
+Technical support before launch and long after it
+Plain answers about availability, scope and cost
+H2: How It Works
+H3: 01 Consultation
+We learn about your plans, your traders, your budget and the markets you want to reach.
+H3: 02 Platform Choice
+You decide between MT4, MT5 or both, based on your audience. We confirm what's available through licence holders in writing.
+H3: 03 Configuration and Branding
+Your groups, symbols, leverage, spreads and branding are set up on your manager access.
+H3: 04 CRM, Plugin and Liquidity Integration
+The CRM is linked through the manager API, plugins such as PAMM and MAM are added where needed, and liquidity connections are configured and tested.
+H3: 05 Launch and Support
+Clients start trading, and we stay on hand for changes, questions and fixes.
+H2: The Technology Behind Your Brokerage
+Each piece below handles one part of the job. Together, they make a brokerage run.
+MT4 and MT5 where your clients trade
+CRM for onboarding, compliance, payments and partners
+PAMM and MAM tools for managed accounts
+Liquidity and bridge for routing and executing orders
+Client portal where traders verify, deposit, withdraw and manage accounts
+Website that brings traders in and sends them to registration
+Hosting that keeps your client-facing systems online
+You don't have to switch everything on at once. We'll help you decide what to launch with and what to add later.
+H2: Who We Help
+H3: New Brokers
+Founders launching their first brokerage who need a platform, CRM and website working together from day one, without building any of it in house.
+H3: Existing Brokers
+Brokers who want to add MT5, bring in PAMM and MAM tools, improve liquidity connections or replace a CRM that's holding them back.
+H3: Scaling Brokerages
+Growing firms that need more capacity, more payment options, more markets or a move toward white label as volume rises.
+H2: MT4 or MT5?
+MT4
+MT5
+Main markets
+Forex and CFDs
+Multi-asset, including exchange-traded instruments
+Chart timeframes
+9
+21
+Pending order types
+4
+6
+Position accounting
+Hedging
+Hedging and netting
+Expert advisor language
+MQL4
+MQL5
+Why traders choose it
+Familiar interface and existing EAs
+Wider markets and newer tools
+Plenty of brokers don't pick one. Offering both lets traders use whichever they prefer. Our MT4 vs MT5 page goes into the decision in more detail.
+H2: Grey Label or White Label?
+Grey Label
+White Label
+Server
+Shared, run by the licence holder
+More dedicated arrangement
+Branding
+On the client side
+Deeper across the setup
+Control
+Manager access to your groups
+Broader administrative control
+Cost
+Lower
+Considerably higher
+Availability
+Available through licence holders
+Depends on licence holder and vendor terms
+Best for
+New and growing brokers
+Established brokers with steady volume
+For most new brokers, grey label is the sensible way in, with white label an option to revisit once the business is established.
+H2: Frequently Asked Questions
+H3: What is a forex grey label?
+It's an arrangement where your brokerage operates under its own brand on a MetaTrader server run by a licence holder. You manage your clients and trading conditions through manager access.
+H3: Can I offer both MT4 and MT5?
+Yes. Many brokers run both so traders can choose the platform they prefer.
+H3: Can I get my own MT4 licence?
+New MT4 licences are no longer issued by the platform vendor, so a grey label through an existing licence holder is the practical route.
+H3: What do PAMM and MAM plugins do?
+They let a money manager trade on behalf of multiple investors, with results, allocations and fees handled automatically.
+H3: Do you provide liquidity?
+We set up bridge technology and connect you to liquidity providers. Pricing and terms come from your agreements with those providers.
+H3: Does the CRM work with both platforms?
+Yes. It connects to MT4 and MT5 through the manager API, so clients can hold accounts on either.
+H3: Are you a broker or a regulated company?
+No. We're a technology provider. We don't hold client funds, offer trading services or give investment advice.
+H3: Do I need a licence to run a brokerage?
+It depends on your business model and where your clients are. Regulatory requirements vary by jurisdiction.
+H3: How long does it take to launch?
+Platform setup is usually quicker than the business side. Company formation, payment provider approval and licensing tend to decide the timeline.
+H3: Can I move to white label later?
+Many brokers plan to. Whether it's possible depends on licence holder availability and vendor terms at the time.
+H2: Build Your Brokerage Technology Stack
+Tell us about the brokerage you want to run and the traders you want to serve. We'll show you how MT4 and MT5 grey label, CRM, plugins and liquidity can come together into a setup that's ready to trade.
