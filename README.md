@@ -18,7 +18,7 @@ Open [`index.html`](index.html) to compare all six layouts. Choose **Open full h
 
 ## Content fidelity
 
-All six pages contain the original Homepage Google Doc's headings and full paragraphs, including six services, five setup steps, seven technology stack items, three audiences, both comparison tables, ten FAQs, and the final CTA copy. The original homepage copy is preserved in [`homepage-source.txt`](homepage-source.txt). Automated checks verified all 124 content entries in all six pages. UI chrome and decorative interface labels are not presented as additional claims or copied template marketing content.
+All six pages contain the original Homepage Google Doc's headings and full paragraphs, including six services, five setup steps, seven technology stack items, three audiences, both comparison tables, ten FAQs, and the final CTA copy. The homepage copy is preserved in [`homepage-source.txt`](homepage-source.txt). Automated checks verified all 124 content entries in all six pages. UI chrome and decorative interface labels are not presented as additional claims or copied template marketing content.
 
 ## Source/reference investigation
 
@@ -28,4 +28,4 @@ See [`DESIGN-AUDIT.md`](DESIGN-AUDIT.md) for the analysis of the user-provided a
 
 These are comparison prototypes published on [GitHub Pages](https://omarreact.github.io/mt4-grey-label/), **not a production brokerage frontend**. The contact CTA currently points to the official website and must be connected to a verified contact route before production. No broker claims, pricing, testimonials or conversion metrics were fabricated. Template source code, vendor scripts and proprietary downloaded images were not redistributed in the new pages.
 
-GitHub Pages publishes `main` from the repository root. `index.html` is the gallery and the six `index-*.html` files are standalone demos.
+GitHub Pages publishes the `main` branch from the repository root. `index.html` is the gallery; the six `index-*.html` files are standalone demos. The archived preview screenshots are not required to render the HTML files.
