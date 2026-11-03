@@ -1,29 +1,31 @@
-# MT4 Grey Label — Six Homepage Concepts
+# MT4 Grey Label — Six Distinct Homepage Layouts
 
-Six standalone, responsive homepage designs for [MT4 Grey Label](https://mt4greylabel.org/). All six preserve the same homepage text from the [Homepage Google Doc](https://docs.google.com/document/d/1AW8JVYdWaMb4VieL7nsDFz1qL1-UYmOqONPlCBhpuMs/edit?tab=t.0).
+**Project:** https://mt4greylabel.org  
+**Source of homepage copy:** https://docs.google.com/document/d/1AW8JVYdWaMb4VieL7nsDFz1qL1-UYmOqONPlCBhpuMs/edit?tab=t.0
 
-## Preview locally
+## Preview
 
-Open **index.html** in a browser to compare the six designs. Its cards use embedded previews of the HTML pages, so no separate screenshot image files are required. Click **Open homepage** to see any full page.
+Open [`index.html`](index.html) to compare all six layouts. Choose **Open full homepage** for the complete static HTML page. All designs work standalone and have inline CSS, SVG/CSS illustrations, and small inline JavaScript only; no framework, install or external image assets are required.
 
-| Design | File | Reference |
+| Design | File | Distinctive layout |
 |---|---|---|
-| TradeNova | [index-tradenova.html](index-tradenova.html) | [Reference](https://tradenova-site.webflow.io) |
-| Fyntic | [index-fyntic.html](index-fyntic.html) | [Reference](https://fyntic.webflow.io) |
-| Fexiva | [index-fexiva.html](index-fexiva.html) | [Reference](https://fexiva.webflow.io) |
-| iDeck | [index-ideck.html](index-ideck.html) | [Reference](https://ideck.webflow.io) |
-| Kickgent | [index-kickgent.html](index-kickgent.html) | [Reference](https://kickgent.webflow.io) |
-| Flowvy | [index-flowvy.html](index-flowvy.html) | [Reference](https://flowvy-template.webflow.io) |
+| TradeNova | `index-tradenova.html` | Split terminal hero, dark chart workstation, asymmetric solutions grid, market-style comparison tables |
+| Fexiva | `index-fexiva.html` | Fintech app-phone hero, editorial image block, rounded bento services, sticky-column setup steps |
+| Fyntic | `index-fyntic.html` | Centered AI-orbit hero, full-width numbered solution list, purple card workflow, radial technology cluster |
+| iDeck | `index-ideck.html` | Magazine-like split typography, overlapping slide deck, printed cards and numbered storyboards |
+| Kickgent | `index-kickgent.html` | Large editorial poster hero, overlapping SaaS screens, offset sticker-grid components |
+| Flowvy | `index-flowvy.html` | Airy center-aligned SaaS hero, wide dashboard illustration, modular feature and workflow cards |
 
-## Content scope
+## Content fidelity
 
-All six pages use the same text from `homepage-source.txt`, based on the linked Google Doc. Each includes the full introduction, services, setup steps, technology stack, audience segments, both comparison tables, ten FAQs, and closing CTA. Each design uses original markup, inline styling, and visual illustrations inspired by its respective reference.
+All six pages contain the original Homepage Google Doc's headings and full paragraphs, including six services, five setup steps, seven technology stack items, three audiences, both comparison tables, ten FAQs, and the final CTA copy. The original homepage copy is preserved in [`homepage-source.txt`](homepage-source.txt). Automated checks verified all 124 content entries in all six pages. UI chrome and decorative interface labels are not presented as additional claims or copied template marketing content.
 
-The six HTML files are standalone and require no build process, CMS, external fonts, or JavaScript framework. The comparison gallery is also plain HTML/CSS.
+## Source/reference investigation
 
-## Notes
+See [`DESIGN-AUDIT.md`](DESIGN-AUDIT.md) for the analysis of the user-provided archive. Only **five** full HTML files were present. The Kickgent page was a template showcase rather than an actual Home V1, while the Flowvy HTML download was absent. The Flowvy concept was based on the template's available public design description; it must not be described as an exact reconstruction of an unavailable page.
 
-- These are static design concepts, **not deployed** or connected to a contact/CRM backend.
-- CTAs point to on-page content because the source document does not specify a contact URL.
-- The listed references are design inspirations, not copied proprietary template code.
-- No Vercel or Cloudflare production deployment has been performed.
+## Production readiness
+
+These are comparison prototypes published on [GitHub Pages](https://omarreact.github.io/mt4-grey-label/), **not a production brokerage frontend**. The contact CTA currently points to the official website and must be connected to a verified contact route before production. No broker claims, pricing, testimonials or conversion metrics were fabricated. Template source code, vendor scripts and proprietary downloaded images were not redistributed in the new pages.
+
+GitHub Pages publishes `main` from the repository root. `index.html` is the gallery and the six `index-*.html` files are standalone demos.
