@@ -1,31 +1,39 @@
-# MT4 Grey Label — Six Distinct Homepage Layouts
+# MT4 Grey Label — Source-driven redesign (v3)
 
-**Project:** https://mt4greylabel.org  
-**Source of homepage copy:** https://docs.google.com/document/d/1AW8JVYdWaMb4VieL7nsDFz1qL1-UYmOqONPlCBhpuMs/edit?tab=t.0
+This package is a *new local revision*, prepared in response to the visual mismatch between the prior six designs and the user's reference sites. **Published as a GitHub Pages static design gallery on the `main` branch.**
 
-## Preview
+## What changed
 
-Open [`index.html`](index.html) to compare all six layouts. Choose **Open full homepage** for the complete static HTML page. All designs work standalone and have inline CSS, SVG/CSS illustrations, and small inline JavaScript only; no framework, install or external image assets are required.
+The earlier six pages independently approximated generic fintech themes. In this revision, four pages instead adapt the actual saved Webflow homepage DOM structure, CSS classes, and associated local design assets that the user supplied. This is a closer reference-based starting point, rather than a palette swap.
 
-| Design | File | Distinctive layout |
-|---|---|---|
-| TradeNova | `index-tradenova.html` | Split terminal hero, dark chart workstation, asymmetric solutions grid, market-style comparison tables |
-| Fexiva | `index-fexiva.html` | Fintech app-phone hero, editorial image block, rounded bento services, sticky-column setup steps |
-| Fyntic | `index-fyntic.html` | Centered AI-orbit hero, full-width numbered solution list, purple card workflow, radial technology cluster |
-| iDeck | `index-ideck.html` | Magazine-like split typography, overlapping slide deck, printed cards and numbered storyboards |
-| Kickgent | `index-kickgent.html` | Large editorial poster hero, overlapping SaaS screens, offset sticker-grid components |
-| Flowvy | `index-flowvy.html` | Airy center-aligned SaaS hero, wide dashboard illustration, modular feature and workflow cards |
+- **TradeNova:** direct adaptation of the downloaded trading homepage, including its centered hero and original page composition.
+- **Fexiva:** direct adaptation of the downloaded financial homepage, including the original hero grid, financial interface cards and image assets.
+- **Fyntic:** direct adaptation of the downloaded AI homepage, including its original hero composition, major visual asset, and service/process sections.
+- **iDeck:** direct adaptation of the downloaded presentation website markup and CSS.
+- **Kickgent:** independent HTML/CSS reconstruction using the `Home V1.webp` preview embedded in the supplied archive; the downloaded HTML itself was only a template showcase, not Home V1.
+- **Flowvy:** retained as a provisional approximation, because the supplied archive did not include Flowvy source HTML or a screenshot. No claim of fidelity is made for this one.
 
-## Content fidelity
+## Content
 
-All six pages contain the original Homepage Google Doc's headings and full paragraphs, including six services, five setup steps, seven technology stack items, three audiences, both comparison tables, ten FAQs, and the final CTA copy. The homepage copy is preserved in [`homepage-source.txt`](homepage-source.txt). Automated checks verified all 124 content entries in all six pages. UI chrome and decorative interface labels are not presented as additional claims or copied template marketing content.
+Only the MT4 Grey Label Homepage Google Doc supplies substantive copy:
+https://docs.google.com/document/d/1AW8JVYdWaMb4VieL7nsDFz1qL1-UYmOqONPlCBhpuMs/edit?tab=t.0
 
-## Source/reference investigation
+The full homepage copy is included in semantic sections on each page. Reference template text was replaced or adapted, although the direct adaptations retain reference-defined visual UI components and illustration assets. A few fragments may remain in decorative image artwork or SVG files: review those before production use.
 
-See [`DESIGN-AUDIT.md`](DESIGN-AUDIT.md) for the analysis of the user-provided archive. Only **five** full HTML files were present. The Kickgent page was a template showcase rather than an actual Home V1, while the Flowvy HTML download was absent. The Flowvy concept was based on the template's available public design description; it must not be described as an exact reconstruction of an unavailable page.
+## Usage
 
-## Production readiness
+1. Open https://omarreact.github.io/mt4-grey-label/ to view the live design gallery.
+2. Open `index.html` for the gallery or any of the six `index-*.html` pages directly.
+3. The GitHub Pages edition links the four Webflow-derived site assets to public Webflow CDN URLs instead of requiring local asset folders. Eight large Fexiva SVGs are stored under `assets/`.
+4. The static pages do not submit leads to a CRM or send email; links jump to sections. Contact integration is not configured.
 
-These are comparison prototypes published on [GitHub Pages](https://omarreact.github.io/mt4-grey-label/), **not a production brokerage frontend**. The contact CTA currently points to the official website and must be connected to a verified contact route before production. No broker claims, pricing, testimonials or conversion metrics were fabricated. Template source code, vendor scripts and proprietary downloaded images were not redistributed in the new pages.
+## Limitations / verification
 
-GitHub Pages publishes the `main` branch from the repository root. `index.html` is the gallery; the six `index-*.html` files are standalone demos. The archived preview screenshots are not required to render the HTML files.
+- Browser screenshot testing could not be completed in this runtime because the browser's managed policy blocks navigation, including localhost files. The new layouts have **not been visually verified** in a browser; do not treat them as pixel-perfect or production-ready.
+- HTML content integrity and relative CSS/image asset paths have been checked by a static QA script.
+- Flowvy cannot be matched accurately without its actual homepage screenshot or source.
+- The user-provided archive contains reference-source markup and artwork. Ensure you have the appropriate template/asset rights before publishing those files publicly.
+
+## Deployment
+
+**GitHub Pages:** https://omarreact.github.io/mt4-grey-label/ · **Source:** `main`. The separate production domain `mt4greylabel.org` has not been changed.

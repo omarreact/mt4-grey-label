@@ -1,0 +1,12 @@
+index-tradenova.html: 14,389 rendered-text characters (static text extraction), 44 assets checked, 0 doc text omissions, 0 missing relative assets
+index-fexiva.html: 19,346 rendered-text characters (static text extraction), 121 assets checked, 0 doc text omissions, 0 missing relative assets
+index-fyntic.html: 21,856 rendered-text characters (static text extraction), 127 assets checked, 0 doc text omissions, 0 missing relative assets
+index-ideck.html: 16,045 rendered-text characters (static text extraction), 29 assets checked, 0 doc text omissions, 0 missing relative assets
+index-kickgent.html: 7,882 rendered-text characters (static text extraction), 0 assets checked, 0 doc text omissions, 0 missing relative assets
+index-flowvy.html: 8,599 rendered-text characters (static text extraction), 0 assets checked, 0 doc text omissions, 0 missing relative assets
+
+Failures:
+None in static checks
+
+Note: static checks do not prove visual similarity; browser screenshot validation is unavailable.
+GitHub Pages edition: the four Webflow-derived homepages reference public Webflow CDN image and CSS URLs. Eight Fexiva SVG illustration snapshots are in assets/. GitHub build success does not prove third-party asset availability or screenshot parity.
