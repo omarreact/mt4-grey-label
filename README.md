@@ -1,5 +1,27 @@
 # MT4 Grey Label — Source-driven redesign (v3)
 
+## Standalone design folders
+
+Each of the six designs lives in its **own folder**. Its complete HTML markup, CSS (`<style>`), and vanilla JavaScript (`<script>`) are contained in **one `index.html` file**. None imports a shared CSS or JavaScript bundle. Styles and interactions are isolated by document.
+
+```text
+/
+├── index.html                  # Six-design comparison gallery
+├── tradenova/index.html        # TradeNova-only HTML, CSS and JS
+├── fexiva/index.html           # Fexiva-only HTML, CSS and JS
+├── fyntic/index.html           # Fyntic-only HTML, CSS and JS
+├── ideck/index.html            # iDeck-only HTML, CSS and JS
+├── kickgent/index.html         # Kickgent-only HTML, CSS and JS
+└── flowvy/index.html           # Flowvy-only HTML, CSS and JS
+```
+
+**Live design routes:** [TradeNova](./tradenova/) · [Fexiva](./fexiva/) · [Fyntic](./fyntic/) · [iDeck](./ideck/) · [Kickgent](./kickgent/) · [Flowvy](./flowvy/).
+
+The six old root-level `index-*.html` URLs remain as **tiny HTML redirects** for backward compatibility; they are not additional copies of the designs. The gallery now links directly to the new folder routes. The root gallery also embeds its own CSS.
+
+**Important:** Separate folders prevent shared-file coupling and CSS/JS collisions. They do not automatically make the visual designs different; independent visual reconstruction and browser comparison are still required. Some design imagery remains externally hosted. All CSS and JavaScript are embedded locally in each design's HTML.
+
+
 This package is a *new local revision*, prepared in response to the visual mismatch between the prior six designs and the user's reference sites. **Published as a GitHub Pages static design gallery on the `main` branch.**
 
 ## What changed
@@ -23,7 +45,7 @@ The full homepage copy is included in semantic sections on each page. Reference 
 ## Usage
 
 1. Open https://omarreact.github.io/mt4-grey-label/ to view the live design gallery.
-2. Open `index.html` for the gallery or any of the six `index-*.html` pages directly.
+2. Open `index.html` for the gallery or one of the six independent `<design>/index.html` files; the historical root-level URLs redirect.
 3. The GitHub Pages edition links the four Webflow-derived site assets to public Webflow CDN URLs instead of requiring local asset folders. Eight large Fexiva SVGs are stored under `assets/`.
 4. The static pages do not submit leads to a CRM or send email; links jump to sections. Contact integration is not configured.
 
