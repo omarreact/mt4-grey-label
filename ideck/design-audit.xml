@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<design_audit site="Ideck" url="https://ideck.webflow.io" type="Webflow Template" category="Presentation / Deck Tool / SaaS">
+  <meta>
+    <title>Ideck - Deck Creation Tool</title>
+    <description>Modern dark SaaS template for presentation/deck building tool. Lime green accents, clean typography, grid backgrounds.</description>
+    <theme>Dark with Lime/Neon Green</theme>
+  </meta>
+
+  <design_system>
+    <colors>
+      <color name="primary-accent" value="#C6FF00 or bright lime green" usage="Logo, CTAs, highlights, badges"/>
+      <color name="bg" value="#000000 / deep dark" usage="Full dark bg with subtle grid"/>
+      <color name="text-primary" value="white"/>
+      <color name="text-muted" value="gray"/>
+      <color name="button-secondary" value="dark gray / transparent border"/>
+      <color name="purple-cta" value="purple for 'Buy Now'"/>
+    </colors>
+    <typography>
+      <font_family>Bold modern sans, large display headings</font_family>
+      <headings>Very large white bold text, e.g. "Rough idea in. Finished deck finally out."</headings>
+    </typography>
+    <effects>
+      <background>Subtle dark grid pattern</background>
+      <buttons>Pill shaped, lime green primary, outlined secondary</buttons>
+    </effects>
+  </design_system>
+
+  <sections>
+    <section name="Navigation">
+      <description>Logo (green square icon + Ideck) left. Links: Product dropdown, Showcase, Pricing, Features. Right: Contact + white "Get Started" pill.</description>
+    </section>
+
+    <section name="Hero">
+      <description>Centered badge "NOW IN PUBLIC BETA · BRAND KITS INCLUDED" with green dot. Massive centered heading. Subtext. Dual CTAs: lime "Make my first deck" + dark "Browse real decks". Bottom left floating toolbar-like: Customize, Figma, Help, purple Buy Now.</description>
+    </section>
+
+    <section name="Features / Showcase">
+      <description>Product demos, feature grids, real deck examples, pricing tiers, etc. Consistent dark + lime green.</description>
+    </section>
+  </sections>
+
+  <recreation_notes>
+    - Bright lime green (#c6ff00-ish) as primary accent on pure dark.
+    - Large bold display typography.
+    - Subtle grid bg for tech feel.
+    - Pill buttons, clean SaaS aesthetic focused on product demo.
+  </recreation_notes>
+</design_audit>
