@@ -135,4 +135,461 @@
     .panel-title { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: .7rem; font-weight: 650; }
     .panel-title small { font-size: .53rem; font-weight: 500; color: #9482aa; }
     .chart-figure { width: 100%; margin-top: 12px; height: 130px; }
-    .chart-axis { display: flex; justify-content: space-between; color: #716180; font-size: .55 }
+    .chart-axis { display: flex; justify-content: space-between; color: #716180; font-size: .55rem; margin-top: -2px; }
+    .activity-list { display: grid; margin-top: 15px; gap: 15px; }
+    .activity-item { display: flex; gap: 9px; align-items: center; }
+    .activity-icon { width: 25px; height: 25px; flex: none; display: grid; place-items: center; border-radius: 8px; background: #362550; color: #ba8cff; font-size: .7rem; }
+    .activity-item strong { display: block; font-size: .58rem; color: #e5dbef; font-weight: 600; }
+    .activity-item span { display: block; margin-top: 2px; color: #80718f; font-size: .51rem; }
+    .floating-card { position: absolute; z-index: 4; background: rgba(29,22,45,.93); border: 1px solid #76549d; border-radius: 13px; box-shadow: 0 24px 60px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.045); backdrop-filter: blur(15px); }
+    .floating-card.left { top: 35%; left: -10px; width: 177px; padding: 17px; transform: rotate(-7deg); }
+    .float-caption { text-transform: uppercase; letter-spacing: .09em; font-size: .55rem; color: #a89bbb; }
+    .float-title { display: block; font-weight: 630; font-size: .73rem; margin-top: 12px; }
+    .float-subtitle { display: block; color: #9d8eaf; font-size: .57rem; margin-top: 5px; }
+    .float-progress { height: 5px; border-radius: 9px; background: #49365c; margin: 15px 0 10px; overflow: hidden; }
+    .float-progress::before { content: ""; display: block; height: 100%; width: 76%; border-radius: inherit; background: linear-gradient(90deg,#7b48dc,#bd96ff); }
+    .float-footer { display: flex; align-items: center; justify-content: space-between; font-size: .58rem; color: #a795b9; }
+    .float-footer b { color: #e4cfff; }
+    .floating-card.right { right: -10px; bottom: 30px; width: 211px; padding: 16px; transform: rotate(5deg); }
+    .floating-row { display: flex; gap: 9px; align-items: center; padding: 10px 0; border-bottom: 1px solid #453451; font-size: .62rem; color: #ded3eb; }
+    .floating-row:last-child { border: 0; padding-bottom: 0; }
+    .float-dot { height: 9px; width: 9px; border-radius: 3px; background: #9f75fa; box-shadow: 0 0 11px #9b59ff77; }
+    .floating-row b { margin-left: auto; font-size: .55rem; color: #a6edc2; font-weight: 600; }
+    .mockup-under { position: absolute; z-index: -1; left: 6%; right: 6%; bottom: -27px; height: 110px; background: #3f1980; opacity: .65; filter: blur(55px); }
+    .hero-footnote { position: relative; padding: 23px 0 28px; font-size: .65rem; letter-spacing: .035em; color: #8e7d9e; text-align: center; background: linear-gradient(180deg,transparent,#0c0816); }
+
+    /* 05 — ONE AUDITED FEATURES SECTION ----------------------------------- */
+    .features { position: relative; background: linear-gradient(180deg,#0c0816 0%,#100a1d 22%,#0b0715 100%); padding: clamp(88px,9vw,128px) 0 0; }
+    .features > .container { position: relative; z-index: 1; }
+    .features::before { content: ""; position: absolute; pointer-events: none; top: 4%; right: -18%; height: 680px; width: 680px; border-radius: 50%; background: radial-gradient(circle,#3f217d33,transparent 66%); }
+    .section-intro { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(0,.78fr); align-items: end; gap: 45px; margin-bottom: 42px; }
+    .section-intro h2 { font-size: clamp(2.65rem,4.5vw,4.85rem); max-width: 750px; margin-top: 18px; text-wrap: balance; }
+    .section-intro p { max-width: 400px; justify-self: end; font-size: .95rem; line-height: 1.84; }
+    .feature-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 15px; }
+    .feature-card { position: relative; min-height: 253px; display: flex; flex-direction: column; overflow: hidden; padding: 27px; border: 1px solid #413056; border-radius: 17px; background: linear-gradient(150deg,#211534 0%,#171024 65%,#171024 100%); transition: transform .3s var(--ease),border-color .3s,box-shadow .3s; }
+    .feature-card::after { content: ""; pointer-events: none; width: 180px; height: 180px; position: absolute; right: -65px; top: -75px; border-radius: 50%; background: radial-gradient(circle,#8b5cf61f,transparent 68%); }
+    .feature-card:hover { transform: translateY(-5px); border-color: #8359ba; box-shadow: 0 20px 55px #09051388; }
+    .feature-icon { height: 47px; width: 47px; display: grid; place-items: center; border: 1px solid #6b4a93; border-radius: 12px; background: linear-gradient(155deg,#513075,#27183f); color: #c9a2ff; box-shadow: 0 8px 30px #9b5dfa1c; }
+    .feature-icon svg { width: 24px; height: 24px; }
+    .feature-number { position: absolute; right: 27px; top: 32px; color: #716283; font-size: .7rem; letter-spacing: .08em; }
+    .feature-card h3 { margin: 34px 0 9px; font-size: 1.33rem; letter-spacing: -.042em; }
+    .feature-card p { font-size: .86rem; line-height: 1.75; color: #a99fb9; }
+    .feature-card.wide { grid-column: span 2; background: radial-gradient(ellipse at 90% 0%,rgba(107,54,191,.27),transparent 54%),#1a112b; }
+    .feature-card.wide h3 { max-width: 470px; }
+    .feature-card.wide p { max-width: 540px; }
+
+    /* 06 — DEMO / FEATURE PREVIEW ----------------------------------------- */
+    .showcase { margin-top: clamp(105px,11vw,153px); }
+    .showcase-intro { text-align: center; max-width: 775px; margin: 0 auto 39px; }
+    .showcase-intro h2 { font-size: clamp(2.45rem,4.4vw,4.65rem); margin: 18px 0; text-wrap: balance; }
+    .showcase-intro p { font-size: .95rem; }
+    .showcase-shell { padding: 20px; border-radius: 22px; border: 1px solid #493465; background: linear-gradient(135deg,#221533,#140d24); box-shadow: 0 25px 90px rgba(0,0,0,.26); }
+    .demo-tabs { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 0 19px; }
+    .demo-tab { padding: 12px 18px; border-radius: 9px; border: 1px solid transparent; background: transparent; color: #b7a9ca; font-size: .82rem; font-weight: 630; transition: .2s; }
+    .demo-tab[aria-selected="true"] { background: #3d2960; border-color: #7656ab; color: #fff; }
+    .demo-tab:hover { color: #fff; }
+    .demo-panel { min-height: 330px; border: 1px solid #3c2c52; border-radius: 15px; overflow: hidden; background: #110b1d; }
+    .demo-panel[hidden] { display: none; }
+    .demo-layout { min-height: 330px; display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; }
+    .demo-copy { padding: clamp(30px,5vw,62px); display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
+    .demo-tag { color: #c49dff; letter-spacing: .15em; text-transform: uppercase; font-size: .67rem; font-weight: 720; }
+    .demo-copy h3 { font-size: clamp(1.95rem,3.1vw,3.05rem); margin: 19px 0; max-width: 440px; }
+    .demo-copy p { font-size: .9rem; max-width: 410px; }
+    .demo-link { display: inline-flex; align-items: center; gap: 9px; margin-top: 24px; font-size: .83rem; color: #c6a4ff; font-weight: 650; }
+    .demo-link:hover { color: #fff; }
+    .demo-art { position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 44px 22px; background: radial-gradient(ellipse 60% 74% at 55% 55%,rgba(120,62,215,.39),transparent 85%),repeating-linear-gradient(0deg,transparent,transparent 33px,#7b53b810 34px); }
+    .demo-art::before { content: ""; position: absolute; inset: 0; border-left: 1px solid #3f2b5a; pointer-events: none; }
+    .mini-ui { width: min(100%,380px); border: 1px solid #7b5ab4; border-radius: 13px; background: #231735; box-shadow: 0 20px 65px #08040f99; transform: rotate(-4deg); overflow: hidden; }
+    .mini-header { display: flex; align-items: center; gap: 8px; padding: 13px 15px; border-bottom: 1px solid #4a3665; color: #e5d6ff; font-size: .73rem; font-weight: 650; }
+    .mini-header small { margin-left: auto; color: #a6f2c3; font-size: .59rem; }
+    .mini-body { padding: 19px; }
+    .mini-eyebrow { color: #b098ce; text-transform: uppercase; letter-spacing: .12em; font-size: .57rem; }
+    .mini-amount { display: block; margin: 10px 0 16px; font-weight: 700; font-size: 1.9rem; letter-spacing: -.06em; }
+    .mini-bars { display: flex; align-items: flex-end; gap: 8px; height: 87px; padding-bottom: 8px; border-bottom: 1px solid #534368; }
+    .mini-bars i { display: block; flex: 1; height: var(--h); min-height: 10%; background: linear-gradient(180deg,#ad87ff,#5a32a6); border-radius: 4px 4px 0 0; }
+    .mini-footer { display: flex; justify-content: space-between; gap: 10px; padding-top: 13px; color: #b5a3c9; font-size: .64rem; }
+    .mini-footer b { color: #a6f2c3; }
+    .mini-lines { display: grid; gap: 9px; }
+    .mini-line { display: flex; justify-content: space-between; gap: 13px; align-items: center; padding: 12px; background: #2e2045; border: 1px solid #513a70; border-radius: 8px; font-size: .7rem; }
+    .mini-line strong { font-size: .64rem; color: #a9e9bd; font-weight: 650; }
+    .mini-pill { display: inline-flex; padding: 5px 10px; margin: 0 0 16px; background: #3b235f; border: 1px solid #6c43a5; border-radius: 30px; font-size: .61rem; color: #d9c6f8; }
+
+    /* 07 — IMPLEMENTATION + FAQ / SUPPORTING FEATURE CONTENT -------------- */
+    .process { padding-top: clamp(108px,11vw,160px); }
+    .process-head { text-align: center; max-width: 745px; margin: 0 auto 45px; }
+    .process-head h2 { margin: 18px 0; font-size: clamp(2.45rem,4.4vw,4.5rem); }
+    .process-head p { font-size: .94rem; }
+    .process-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
+    .step { padding: 31px; background: linear-gradient(160deg,#1d1230,#140d21); border: 1px solid #45305e; border-radius: 16px; }
+    .step-number { display: inline-grid; place-items: center; width: 43px; height: 43px; border-radius: 50%; background: #493071; border: 1px solid #7851b4; font-size: .78rem; font-weight: 700; color: #d6b7ff; }
+    .step h3 { font-size: 1.25rem; margin: 34px 0 12px; }
+    .step p { font-size: .86rem; }
+    .details-row { display: grid; grid-template-columns: minmax(0,.78fr) minmax(0,1.22fr); gap: 70px; align-items: start; margin-top: clamp(105px,10vw,150px); }
+    .details-intro h2 { font-size: clamp(2.5rem,4.2vw,4rem); margin: 18px 0 15px; }
+    .details-intro p { font-size: .91rem; }
+    .faq-list { border-top: 1px solid #47345d; }
+    .faq { border-bottom: 1px solid #47345d; }
+    .faq summary { display: flex; align-items: center; gap: 18px; cursor: pointer; list-style: none; padding: 21px 0; font-size: .91rem; font-weight: 640; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary .faq-index { flex: none; color: #b586fa; font-size: .7rem; letter-spacing: .05em; }
+    .faq summary .faq-q { flex: 1; }
+    .faq summary .faq-plus { display: grid; place-items: center; flex: none; width: 28px; height: 28px; border: 1px solid #57436d; border-radius: 50%; font-size: 1.1rem; font-weight: 400; color: #d4b4ff; transition: transform .2s; }
+    .faq[open] .faq-plus { transform: rotate(45deg); }
+    .faq p { padding: 0 43px 24px 35px; font-size: .85rem; line-height: 1.78; }
+
+    /* 08 — CONVERSION CTA AND FOOTER -------------------------------------- */
+    .closing-card { margin-top: clamp(110px,11vw,160px); position: relative; isolation: isolate; padding: clamp(62px,7.5vw,105px) 25px; overflow: hidden; text-align: center; border: 1px solid #68459b; border-radius: 25px; background: radial-gradient(ellipse 80% 110% at 50% 118%,rgba(152,75,248,.55),transparent 82%),linear-gradient(125deg,#26153e,#190e2b 50%,#26153e); box-shadow: inset 0 1px 0 #c79cff18; }
+    .closing-card::before { content: ""; position: absolute; z-index: -1; inset: 0; opacity: .45; background: repeating-linear-gradient(90deg,transparent 0,transparent 9%,#af86ed17 9.15%,transparent 9.25%,transparent 18%); }
+    .closing-card h2 { margin: 17px auto 19px; max-width: 730px; font-size: clamp(2.85rem,5vw,5.15rem); text-wrap: balance; }
+    .closing-card p { max-width: 630px; margin: 0 auto 27px; font-size: .96rem; }
+    .closing-card .button { background: white; color: #24143b; border-color: white; box-shadow: 0 8px 30px #09041350; }
+    .closing-card .button:hover { box-shadow: 0 13px 39px #08040e88; }
+    .site-footer { margin-top: 102px; padding: 43px 0 23px; border-top: 1px solid #372849; background: #0a0712; }
+    .footer-main { display: flex; align-items: flex-start; justify-content: space-between; gap: 34px; }
+    .footer-main p { max-width: 400px; font-size: .82rem; margin-top: 17px; }
+    .footer-nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 14px 27px; padding-top: 12px; }
+    .footer-nav a { font-size: .82rem; color: #b5a9c2; }
+    .footer-nav a:hover { color: #fff; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; border-top: 1px solid #31233f; margin-top: 60px; padding-top: 22px; color: #82748e; font-size: .74rem; }
+    .footer-bottom a { color: #b9a5d8; }
+    .footer-bottom a:hover { color: white; }
+    .back-top { position: fixed; z-index: 80; right: 20px; bottom: 20px; display: grid; place-items: center; width: 45px; height: 45px; background: #8456e9; color: #fff; border: 1px solid #a885ec; border-radius: 12px; opacity: 0; pointer-events: none; transform: translateY(10px); transition: opacity .25s,transform .25s; box-shadow: 0 10px 35px #08040f70; }
+    .back-top.visible { opacity: 1; pointer-events: auto; transform: none; }
+    .back-top svg { width: 19px; height: 19px; }
+    /* Motion is progressively enhanced; content remains visible without JS. */
+    .motion-ready .reveal { opacity: 0; transform: translateY(22px); transition: opacity .75s var(--ease),transform .75s var(--ease); }
+    .motion-ready .reveal.in-view { opacity: 1; transform: none; }
+
+    /* 09 — RESPONSIVE: TABLET --------------------------------------------- */
+    @media (max-width: 1030px) {
+      .header-cta { display: none; }
+      .dashboard { grid-template-columns: 145px minmax(0,1fr); }
+      .dash-content { padding: 20px; }
+      .floating-card.left { left: 0; }
+      .floating-card.right { right: 0; }
+      .hero-stage { padding-inline: 28px; }
+      .metric { padding: 12px; }
+      .feature-card { padding: 24px; }
+      .details-row { gap: 35px; }
+    }
+    @media (max-width: 800px) {
+      .header-inner { height: 70px; }
+      .menu-toggle { display: flex; }
+      .header-cta { display: inline-flex; margin-left: auto; }
+      .nav-links { position: absolute; left: 0; right: 0; top: 70px; display: none; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 0; margin: 0; padding: 16px 32px 28px; background: #130d20; border-bottom: 1px solid #55406b; box-shadow: 0 18px 45px #080510bb; }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 17px 5px; border-bottom: 1px solid #322442; font-size: 1rem; }
+      .hero h1 { font-size: clamp(3.45rem,8vw,5.75rem); }
+      .hero-stage { padding-inline: 20px; }
+      .dash-sidebar { display: none; }
+      .dashboard { grid-template-columns: minmax(0,1fr); }
+      .floating-card.left { left: -2px; top: 52%; }
+      .floating-card.right { right: -6px; bottom: 24px; }
+      .section-intro { grid-template-columns: 1fr; gap: 17px; }
+      .section-intro p { max-width: 620px; justify-self: start; }
+      .feature-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .feature-card.wide { grid-column: span 2; }
+      .details-row { grid-template-columns: 1fr; gap: 27px; }
+      .details-intro { max-width: 600px; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .process-grid .step:last-child { grid-column: span 2; }
+    }
+    /* 10 — RESPONSIVE: MOBILE --------------------------------------------- */
+    @media (max-width: 580px) {
+      .container { width: calc(100% - 36px); }
+      .header-inner { gap: 12px; }
+      .header-cta { display: none; }
+      .brand { font-size: 1rem; }
+      .nav-links { padding-inline: 18px; }
+      .hero { padding-top: 74px; }
+      .hero h1 { font-size: clamp(2.95rem,11.35vw,4.15rem); letter-spacing: -.067em; margin-top: 24px; }
+      .hero-description { font-size: .94rem; line-height: 1.75; }
+      .hero-actions { gap: 10px; }
+      .hero-actions .button { flex: 1 1 100%; }
+      .hero-caption { font-size: .66rem; flex-wrap: wrap; gap: 8px 12px; }
+      .hero-stage { width: calc(100% + 36px); margin-left: -18px; margin-top: 54px; padding-inline: 8px; }
+      .browser { border-radius: 12px 12px 0 0; }
+      .browser-bar { height: 33px; padding: 0 10px; }
+      .browser-url { padding: 3px 15px; font-size: .52rem; }
+      .browser-controls { display: none; }
+      .dash-content { padding: 15px 12px 17px; }
+      .dash-heading h3 { font-size: .96rem; }
+      .dash-kicker { font-size: .5rem; }
+      .dash-status { font-size: .5rem; padding: 5px 7px; }
+      .metric-grid { gap: 6px; margin: 16px 0 8px; }
+      .metric { padding: 9px; border-radius: 7px; }
+      .metric-label { font-size: .48rem; }
+      .metric-value { font-size: 1.03rem; margin-top: 6px; }
+      .metric-detail { font-size: .47rem; }
+      .dash-lower { grid-template-columns: 1fr; }
+      .chart-panel { padding: 12px; }
+      .chart-figure { height: 110px; }
+      .activity-panel { display: none; }
+      .floating-card.left { left: -10px; top: 51%; width: 116px; padding: 10px; transform: rotate(-6deg); }
+      .floating-card.right { width: 137px; padding: 10px; bottom: 30px; right: -11px; }
+      .float-caption { font-size: .44rem; }
+      .float-title { font-size: .56rem; margin-top: 8px; }
+      .float-subtitle, .float-footer { font-size: .46rem; }
+      .float-progress { margin: 11px 0 8px; }
+      .floating-row { font-size: .49rem; padding: 7px 0; gap: 5px; }
+      .floating-row b { font-size: .44rem; }
+      .float-dot { height: 6px; width: 6px; }
+      .hero-footnote { padding: 15px 0 22px; font-size: .58rem; }
+      .features { padding-top: 79px; }
+      .section-intro { margin-bottom: 27px; }
+      .section-intro h2 { font-size: clamp(2.55rem,10vw,3.6rem); }
+      .section-intro p { font-size: .89rem; }
+      .feature-grid { grid-template-columns: 1fr; gap: 12px; }
+      .feature-card, .feature-card.wide { grid-column: auto; min-height: 215px; padding: 24px; }
+      .feature-card h3 { margin-top: 27px; }
+      .showcase { margin-top: 90px; }
+      .showcase-intro h2, .process-head h2 { font-size: clamp(2.4rem,9.5vw,3.5rem); }
+      .showcase-shell { padding: 10px; border-radius: 16px; }
+      .demo-tabs { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 5px; padding-bottom: 10px; }
+      .demo-tab { padding: 11px 5px; font-size: .65rem; }
+      .demo-layout { grid-template-columns: 1fr; }
+      .demo-copy { padding: 30px 23px 17px; }
+      .demo-copy h3 { font-size: 2rem; }
+      .demo-art { min-height: 260px; padding: 20px; }
+      .demo-art::before { border-left: 0; border-top: 1px solid #3f2b5a; }
+      .mini-ui { max-width: 300px; }
+      .process { padding-top: 94px; }
+      .process-grid { grid-template-columns: 1fr; }
+      .process-grid .step:last-child { grid-column: auto; }
+      .step { padding: 26px; }
+      .step h3 { margin-top: 25px; }
+      .details-row { margin-top: 90px; }
+      .details-intro h2 { font-size: 2.7rem; }
+      .faq summary { font-size: .84rem; gap: 11px; }
+      .faq p { padding-left: 28px; padding-right: 12px; }
+      .closing-card { margin-top: 94px; padding: 63px 18px; border-radius: 18px; }
+      .closing-card h2 { font-size: clamp(2.55rem,10vw,3.65rem); }
+      .closing-card p { font-size: .87rem; }
+      .site-footer { margin-top: 78px; }
+      .footer-main { flex-direction: column; }
+      .footer-nav { justify-content: flex-start; padding: 0; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; margin-top: 40px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+      .motion-ready .reveal { opacity: 1 !important; transform: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- NAVIGATION: geometric mark, restrained menu, purple outlined CTA -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="MT4 Grey Label homepage">
+        <span class="brand-logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.5 15.4 8.6 22.3 12l-6.9 3.4L12 21.5l-3.4-6.1L1.7 12l6.9-3.4L12 2.5Z" stroke="white" stroke-width="1.65" stroke-linejoin="round"/><path d="M12 7.2V17M7.2 12h9.6" stroke="white" stroke-width="1.2" opacity=".9"/></svg>
+        </span>
+        <span>MT4 <em>Grey Label</em></span>
+      </a>
+      <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#demo">Platform demo</a>
+        <a href="#process">How it works</a>
+        <a href="#faq">FAQs</a>
+      </nav>
+      <a class="button header-cta" href="#contact">Explore our solutions <svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <button class="menu-toggle" id="menu-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu" type="button"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO: centered type, two CTAs and layered product browser mockups -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-badge reveal"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m12 3 2.4 6.6L21 12l-6.6 2.4L12 21l-2.4-6.6L3 12l6.6-2.4L12 3Z" fill="currentColor"/></svg></span> The technology behind modern brokerages <span aria-hidden="true">↗</span></div>
+        <h1 class="reveal" id="hero-title">Build your brokerage.<br><span class="grad-text">Connect everything.</span></h1>
+        <p class="hero-description reveal">MT4 and MT5 grey label platforms, a capable forex CRM, managed-account tools and liquidity connectivity—thoughtfully brought together in one brokerage technology stack.</p>
+        <div class="hero-actions reveal"><a class="button button-primary" href="#solutions">Explore solutions <svg viewBox="0 0 20 20" aria-hidden="true" fill="none"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="button button-secondary" href="#demo">View platform preview <svg viewBox="0 0 20 20" aria-hidden="true" fill="none"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+        <div class="hero-caption reveal"><span>Custom-branded setup</span><span>Connected client workflows</span><span>Built for growth</span></div>
+
+        <div class="hero-stage reveal" role="group" aria-label="Illustrative mockups of a brokerage technology dashboard and integrations">
+          <div class="browser">
+            <div class="browser-bar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="browser-url">brokerage / workspace / overview</span><span class="browser-controls">•••</span></div>
+            <div class="dashboard">
+              <aside class="dash-sidebar" aria-hidden="true">
+                <div class="dash-brand"><span class="dash-brand-icon">✦</span> BrokerOS <span style="font-size:.5rem;color:#796c8a;font-weight:500">/ demo</span></div>
+                <div class="dash-group">Workspace</div>
+                <div class="dash-link active"><svg viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="6" height="6" rx="1.5" stroke="currentColor"/><rect x="11" y="3" width="6" height="6" rx="1.5" stroke="currentColor"/><rect x="3" y="11" width="6" height="6" rx="1.5" stroke="currentColor"/><rect x="11" y="11" width="6" height="6" rx="1.5" stroke="currentColor"/></svg> Overview</div>
+                <div class="dash-link"><svg viewBox="0 0 20 20" fill="none"><path d="M3 15.5h14M4 11l4-4 3 3 5-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> Trading platforms</div>
+                <div class="dash-link"><svg viewBox="0 0 20 20" fill="none"><circle cx="8" cy="7" r="3" stroke="currentColor"/><path d="M2.5 17c.5-3 2.3-4.5 5.5-4.5s5 1.5 5.5 4.5M14 5h3m-1.5-1.5v3" stroke="currentColor" stroke-linecap="round"/></svg> Clients & KYC</div>
+                <div class="dash-link"><svg viewBox="0 0 20 20" fill="none"><path d="M3 4h14v12H3zM3 8h14M6 13h4" stroke="currentColor" stroke-width="1.4"/></svg> Payment flows</div>
+                <div class="dash-link"><svg viewBox="0 0 20 20" fill="none"><circle cx="5" cy="5" r="2" stroke="currentColor"/><circle cx="15" cy="10" r="2" stroke="currentColor"/><circle cx="5" cy="15" r="2" stroke="currentColor"/><path d="m7 6 6 3m-6 5 6-3" stroke="currentColor"/></svg> Liquidity</div>
+                <div class="dash-bottom"><b></b> Integrations connected</div>
+              </aside>
+              <div class="dash-content">
+                <div class="dash-heading"><div><div class="dash-kicker">Technology workspace / preview</div><h3>Brokerage overview</h3></div><span class="dash-status">All systems online</span></div>
+                <div class="metric-grid">
+                  <div class="metric"><div class="metric-label">Client accounts</div><div class="metric-value">2,840</div><span class="metric-detail">↗ +12.8% this month</span></div>
+                  <div class="metric"><div class="metric-label">Connected systems</div><div class="metric-value">08</div><span class="metric-detail neutral">Platform & operations</span></div>
+                  <div class="metric"><div class="metric-label">Automation health</div><div class="metric-value">99.2%</div><span class="metric-detail">● Healthy workflow</span></div>
+                </div>
+                <div class="dash-lower">
+                  <div class="chart-panel"><div class="panel-title">Client activity <small>Illustrative monthly view</small></div>
+                    <svg class="chart-figure" viewBox="0 0 440 150" preserveAspectRatio="none" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <defs><linearGradient id="chart-area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#9e6aff" stop-opacity=".42"/><stop offset="1" stop-color="#9e6aff" stop-opacity="0"/></linearGradient><linearGradient id="chart-stroke" x1="0" x2="1"><stop stop-color="#7650e6"/><stop offset="1" stop-color="#d5a8ff"/></linearGradient></defs>
+                      <path d="M0 37H440M0 73H440M0 110H440M0 145H440" stroke="#44334f" stroke-width=".7" stroke-dasharray="3 5"/>
+                      <path d="M0 122C24 112 37 130 65 112S109 94 135 101S184 71 207 84S249 93 279 64S322 77 350 48S405 50 440 19V150H0Z" fill="url(#chart-area)"/>
+                      <path d="M0 122C24 112 37 130 65 112S109 94 135 101S184 71 207 84S249 93 279 64S322 77 350 48S405 50 440 19" stroke="url(#chart-stroke)" stroke-width="3" stroke-linecap="round"/>
+                      <circle cx="350" cy="48" r="4" fill="#c4a3ff" stroke="#271b3e" stroke-width="3"/>
+                    </svg><div class="chart-axis"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span></div>
+                  </div>
+                  <div class="activity-panel"><div class="panel-title">Recent activity <small>Live preview</small></div><div class="activity-list">
+                    <div class="activity-item"><span class="activity-icon">✓</span><div><strong>KYC review completed</strong><span>Client onboarding</span></div></div>
+                    <div class="activity-item"><span class="activity-icon">↗</span><div><strong>Trade account created</strong><span>MT5 platform</span></div></div>
+                    <div class="activity-item"><span class="activity-icon">◇</span><div><strong>Bridge check passed</strong><span>Liquidity route</span></div></div>
+                  </div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="floating-card left" aria-hidden="true"><span class="float-caption">Setup workflow</span><strong class="float-title">Broker workspace</strong><span class="float-subtitle">Configuration progress</span><div class="float-progress"></div><div class="float-footer"><span>4 of 5 modules</span><b>76%</b></div></div>
+          <div class="floating-card right" aria-hidden="true"><span class="float-caption">Connected technology</span><div class="floating-row"><span class="float-dot"></span> MT4 / MT5 <b>Active</b></div><div class="floating-row"><span class="float-dot"></span> Broker CRM <b>Active</b></div><div class="floating-row"><span class="float-dot"></span> Liquidity bridge <b>Active</b></div></div>
+          <div class="mockup-under" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="hero-footnote">Product screens and metrics are illustrative mockups, not live broker account data.</div>
+    </section>
+
+    <!-- FEATURES: the audit's third major section; capabilities, preview and supporting details -->
+    <section class="features" id="solutions" aria-labelledby="features-title">
+      <div class="container">
+        <!-- FEATURES / SIX KEY CAPABILITIES -->
+        <div class="section-intro reveal"><div><span class="eyebrow"><span class="dot"></span> The complete technology stack</span><h2 id="features-title">One foundation.<br><span class="grad-text">Everything in sync.</span></h2></div><p>From the trading platform your clients recognize to the systems your team relies on, build a more connected brokerage experience without stitching everything together yourself.</p></div>
+        <div class="feature-grid">
+          <article class="feature-card reveal"><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="m6 15 4-4 3 2 5-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="feature-number">01 / 06</span><h3>MT4 Grey Label</h3><p>A familiar trading experience, client-facing brokerage branding and administrative access under a hosting licence arrangement.</p></article>
+          <article class="feature-card reveal"><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 19h18M5 15l4-5 4 2 6-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="19" cy="4" r="2" fill="currentColor"/></svg></span><span class="feature-number">02 / 06</span><h3>MT5 Grey Label</h3><p>Offer a modern multi-asset platform with broader timeframes, order types and market support tailored to your setup.</p></article>
+          <article class="feature-card reveal"><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 20c0-3.5 1.8-5.2 5.5-5.2s5.5 1.7 5.5 5.2M16 7h6M16 12h6M17 17h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><span class="feature-number">03 / 06</span><h3>Forex Broker CRM</h3><p>Bring onboarding, KYC, client accounts, payments and introducing-broker workflows into one operational interface.</p></article>
+          <article class="feature-card reveal"><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="5" r="3" stroke="currentColor" stroke-width="1.6"/><circle cx="5" cy="19" r="3" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="19" r="3" stroke="currentColor" stroke-width="1.6"/><path d="m10 7.5-3.5 9m7-9 4 9M8 19h8" stroke="currentColor" stroke-width="1.6"/></svg></span><span class="feature-number">04 / 06</span><h3>PAMM & MAM</h3><p>Support managed-account strategies with allocation rules, money-manager tools and investor reporting.</p></article>
+          <article class="feature-card reveal"><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="5" cy="12" r="2.5" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="5" r="2.5" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="19" r="2.5" stroke="currentColor" stroke-width="1.6"/><path d="m7 11 9.5-5m-9.5 7 9.5 5" stroke="currentColor" stroke-width="1.6"/></svg></span><span class="feature-number">05 / 06</span><h3>Liquidity & Bridge</h3><p>Connect platform execution to liquidity providers with configurable routing for your brokerage model.</p></article>
+          <article class="feature-card reveal"><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M3 9h18M8 9v11M12 13h6M12 16h4" stroke="currentColor" stroke-width="1.6"/></svg></span><span class="feature-number">06 / 06</span><h3>Broker Website</h3><p>A high-converting client website with CRM-connected account opening, platform access and essential legal pages.</p></article>
+        </div>
+
+        <!-- FEATURES / INTERACTIVE MOCKUP DEMONSTRATIONS -->
+        <div class="showcase" id="demo"><div class="showcase-intro reveal"><span class="eyebrow"><span class="dot"></span> Platform in perspective</span><h2>One connected workspace.<br><span class="grad-text">More control at every step.</span></h2><p>Explore illustrative product interfaces that show how trading infrastructure, back-office tools and integrations fit together.</p></div>
+          <div class="showcase-shell reveal"><div class="demo-tabs" role="tablist" aria-label="Platform preview views">
+            <button class="demo-tab" role="tab" type="button" id="tab-platform" aria-controls="panel-platform" aria-selected="true" tabindex="0">01 &nbsp; Platform</button>
+            <button class="demo-tab" role="tab" type="button" id="tab-crm" aria-controls="panel-crm" aria-selected="false" tabindex="-1">02 &nbsp; Broker CRM</button>
+            <button class="demo-tab" role="tab" type="button" id="tab-liquidity" aria-controls="panel-liquidity" aria-selected="false" tabindex="-1">03 &nbsp; Integrations</button>
+          </div>
+          <div class="demo-panel" id="panel-platform" role="tabpanel" aria-labelledby="tab-platform" tabindex="0"><div class="demo-layout"><div class="demo-copy"><span class="demo-tag">Trading infrastructure</span><h3>Start with the platform traders trust.</h3><p>Offer MT4, MT5 or both through an arrangement that matches your brokerage requirements, branding and account structure.</p><a class="demo-link" href="#process">See the setup process <span aria-hidden="true">↗</span></a></div><div class="demo-art"><div class="mini-ui" aria-hidden="true"><div class="mini-header"><span class="dash-brand-icon">✦</span> MT5 workspace <small>● Connected</small></div><div class="mini-body"><span class="mini-eyebrow">Trading activity / illustrative</span><strong class="mini-amount">24,680 <span style="font-size:.7rem;color:#b5a5c9;font-weight:500">orders</span></strong><div class="mini-bars"><i style="--h:45%"></i><i style="--h:62%"></i><i style="--h:50%"></i><i style="--h:73%"></i><i style="--h:66%"></i><i style="--h:82%"></i><i style="--h:97%"></i><i style="--h:77%"></i></div><div class="mini-footer"><span>Execution overview</span><b>↗ Healthy</b></div></div></div></div></div></div>
+          <div class="demo-panel" id="panel-crm" role="tabpanel" aria-labelledby="tab-crm" tabindex="0" hidden><div class="demo-layout"><div class="demo-copy"><span class="demo-tag">Client lifecycle</span><h3>Bring every client journey into view.</h3><p>Make registration, verification, account creation and introducer management easier to coordinate from a single back office.</p><a class="demo-link" href="#contact">Explore CRM integration <span aria-hidden="true">↗</span></a></div><div class="demo-art"><div class="mini-ui" aria-hidden="true"><div class="mini-header"><span class="dash-brand-icon">✦</span> Client lifecycle <small>● Synced</small></div><div class="mini-body"><div class="mini-pill">Onboarding / example workflow</div><div class="mini-lines"><div class="mini-line"><span>Identity verified</span><strong>Completed ✓</strong></div><div class="mini-line"><span>Trading account</span><strong>Created ✓</strong></div><div class="mini-line"><span>Client portal access</span><strong>Enabled ✓</strong></div></div></div></div></div></div></div>
+          <div class="demo-panel" id="panel-liquidity" role="tabpanel" aria-labelledby="tab-liquidity" tabindex="0" hidden><div class="demo-layout"><div class="demo-copy"><span class="demo-tag">Flexible integrations</span><h3>Connect the services behind each trade.</h3><p>Bring platform, bridge and operating tools together with a clearer technical architecture and integration plan.</p><a class="demo-link" href="#process">Understand the rollout <span aria-hidden="true">↗</span></a></div><div class="demo-art"><div class="mini-ui" aria-hidden="true"><div class="mini-header"><span class="dash-brand-icon">✦</span> System connections <small>● Healthy</small></div><div class="mini-body"><div class="mini-pill">Illustrative integration status</div><div class="mini-lines"><div class="mini-line"><span>MetaTrader gateway</span><strong>Connected ●</strong></div><div class="mini-line"><span>Bridge & liquidity</span><strong>Connected ●</strong></div><div class="mini-line"><span>CRM manager API</span><strong>Connected ●</strong></div></div></div></div></div></div></div>
+          </div></div>
+        </div>
+
+        <!-- FEATURES / IMPLEMENTATION PROCESS -->
+        <div class="process" id="process"><div class="process-head reveal"><span class="eyebrow"><span class="dot"></span> A practical path to launch</span><h2>From concept to <span class="grad-text">connected operations.</span></h2><p>A clear implementation process helps your team make technology decisions in the right order.</p></div>
+          <div class="process-grid"><article class="step reveal"><span class="step-number">01</span><h3>Plan the brokerage</h3><p>Define your market, operating model, trading platform, client workflows and the integrations your business needs.</p></article><article class="step reveal"><span class="step-number">02</span><h3>Build the stack</h3><p>Configure platform access, brand the experience, integrate CRM functions and connect required plugins and services.</p></article><article class="step reveal"><span class="step-number">03</span><h3>Validate & launch</h3><p>Test account workflows, permissions, funding paths and trading connectivity before production handover and support.</p></article></div>
+        </div>
+
+        <!-- FEATURES / FREQUENT QUESTIONS -->
+        <div class="details-row" id="faq"><div class="details-intro reveal"><span class="eyebrow"><span class="dot"></span> Frequently asked</span><h2>Everything you need to know.</h2><p>Key distinctions and practical considerations before choosing the technology behind your brokerage.</p></div><div class="faq-list reveal">
+          <details class="faq" open><summary><span class="faq-index">01</span><span class="faq-q">What is a forex grey label?</span><span class="faq-plus" aria-hidden="true">+</span></summary><p>A grey-label arrangement lets a brokerage offer a branded trading experience while the core platform server is operated by an existing licence holder. Scope, administrative access and contractual rights depend on the provider.</p></details>
+          <details class="faq"><summary><span class="faq-index">02</span><span class="faq-q">Can my brokerage offer MT4 and MT5?</span><span class="faq-plus" aria-hidden="true">+</span></summary><p>Potentially yes, provided your platform partners support both. Availability, commercial terms and jurisdictional restrictions should be confirmed before any commitment.</p></details>
+          <details class="faq"><summary><span class="faq-index">03</span><span class="faq-q">How do CRM and liquidity connect to the platform?</span><span class="faq-plus" aria-hidden="true">+</span></summary><p>Typically, a broker CRM uses platform management integrations for client and account operations, while bridge software manages connections to liquidity providers. The architecture varies by vendor and execution model.</p></details>
+          <details class="faq"><summary><span class="faq-index">04</span><span class="faq-q">Does your technology replace licensing or compliance?</span><span class="faq-plus" aria-hidden="true">+</span></summary><p>No. Technology infrastructure does not replace legal authorization, applicable licensing, compliance procedures or independent professional advice. Those obligations depend on where and how the brokerage operates.</p></details>
+          <details class="faq"><summary><span class="faq-index">05</span><span class="faq-q">Can we expand the platform setup later?</span><span class="faq-plus" aria-hidden="true">+</span></summary><p>Many brokerages add features, integrations and capacity as they grow. The path to a larger arrangement or different licence structure depends on the platform provider, contracts and technical requirements.</p></details>
+        </div></div>
+
+        <!-- FEATURES / FINAL CTA -->
+        <div class="closing-card reveal" id="contact"><span class="eyebrow"><span class="dot"></span> Ready to explore your setup?</span><h2>Your next chapter starts with <span class="grad-text">the right stack.</span></h2><p>Compare the essential building blocks of a modern brokerage and choose a practical path from initial setup to a connected operation.</p><a class="button" href="#solutions">Explore the solutions <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER: compact, understated, matching the dark Kickgent visual system -->
+  <footer class="site-footer"><div class="container"><div class="footer-main"><div><a class="brand" href="#home"><span class="brand-logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2.5 15.4 8.6 22.3 12l-6.9 3.4L12 21.5l-3.4-6.1L1.7 12l6.9-3.4L12 2.5Z" stroke="white" stroke-width="1.65" stroke-linejoin="round"/><path d="M12 7.2V17M7.2 12h9.6" stroke="white" stroke-width="1.2"/></svg></span><span>MT4 <em>Grey Label</em></span></a><p>Connected platform, client-management and integration technology for forex brokerage businesses.</p></div><nav class="footer-nav" aria-label="Footer navigation"><a href="#home">Home</a><a href="#solutions">Solutions</a><a href="#demo">Preview</a><a href="#process">Process</a><a href="#faq">FAQs</a><a href="https://kickgent.webflow.io/" target="_blank" rel="noopener noreferrer">Design reference ↗</a></nav></div><div class="footer-bottom"><span>MT4 Grey Label · Technology infrastructure, not trading or investment advice.</span><a href="#top">Back to top ↑</a></div></div></footer>
+  <button class="back-top" type="button" id="back-top" aria-label="Back to top"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 16V4m-5 5 5-5 5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+
+  <!-- 11 — BEHAVIOR: mobile menu, accessible demo tabs, FAQ, reveal motion -->
+  <script>
+    (() => {
+      'use strict';
+      const menuButton = document.getElementById('menu-toggle');
+      const nav = document.getElementById('primary-nav');
+      const backTop = document.getElementById('back-top');
+      const tabs = [...document.querySelectorAll('[role="tab"]')];
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const closeMenu = () => {
+        nav.classList.remove('open');
+        document.body.classList.remove('menu-open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Open menu');
+      };
+      menuButton.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('open');
+        document.body.classList.toggle('menu-open', isOpen);
+        menuButton.setAttribute('aria-expanded', String(isOpen));
+        menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      });
+      nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && nav.classList.contains('open')) {
+          closeMenu();
+          menuButton.focus();
+        }
+      });
+      document.addEventListener('click', event => {
+        if (nav.classList.contains('open') && !nav.contains(event.target) && !menuButton.contains(event.target)) closeMenu();
+      });
+      window.addEventListener('resize', () => { if (window.innerWidth > 800) closeMenu(); });
+      const activateTab = (target, shouldFocus = false) => {
+        tabs.forEach(tab => {
+          const active = tab === target;
+          tab.setAttribute('aria-selected', String(active));
+          tab.tabIndex = active ? 0 : -1;
+          const panel = document.getElementById(tab.getAttribute('aria-controls'));
+          if (panel) panel.hidden = !active;
+        });
+        if (shouldFocus) target.focus();
+      };
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => activateTab(tab));
+        tab.addEventListener('keydown', event => {
+          let next = index;
+          if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (index + 1) % tabs.length;
+          else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (index - 1 + tabs.length) % tabs.length;
+          else if (event.key === 'Home') next = 0;
+          else if (event.key === 'End') next = tabs.length - 1;
+          else return;
+          event.preventDefault();
+          activateTab(tabs[next], true);
+        });
+      });
+      document.querySelectorAll('.faq').forEach(item => item.addEventListener('toggle', () => {
+        if (item.open) document.querySelectorAll('.faq').forEach(other => { if (other !== item) other.open = false; });
+      }));
+      const updateBackTop = () => backTop.classList.toggle('visible', window.scrollY > 650);
+      window.addEventListener('scroll', updateBackTop, { passive: true });
+      updateBackTop();
+      backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reducedMotion.matches ? 'instant' : 'smooth' }));
+      if ('IntersectionObserver' in window && !reducedMotion.matches) {
+        const revealNodes = [...document.querySelectorAll('.reveal')];
+        // Initial visible elements remain visible if animations are not supported.
+        const observer = new IntersectionObserver(entries => {
+          for (const entry of entries) if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        }, { threshold: .025, rootMargin: '0px 0px 45px 0px' });
+        revealNodes.forEach(node => observer.observe(node));
+        // Delay enhancement one paint so the initial static page never appears empty.
+        requestAnimationFrame(() => {
+          document.documentElement.classList.add('motion-ready');
+          revealNodes.forEach(node => {
+            if (node.getBoundingClientRect().top < innerHeight * .96) node.classList.add('in-view');
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
