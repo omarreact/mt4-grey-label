@@ -15,6 +15,43 @@
 /* 06. Responsive */
 @media(max-width:1000px){.header-right .text-link{display:none}.nav{gap:18px}.hero h1{font-size:clamp(3.5rem,8vw,6rem)}.deck-body{grid-template-columns:140px 1fr}.deck-content{padding:22px}.mini-deck{width:170px}}@media(max-width:780px){.header{height:69px}.nav{display:none;position:absolute;top:69px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:17px 28px;background:#121411;border-bottom:1px solid #ffffff25}.nav.open{display:flex}.nav a{padding:13px 0;border-bottom:1px solid #ffffff19}.toggle{display:block;margin-left:auto}.header-right{display:none}.hero{padding-top:90px}.show-grid,.plan-grid{grid-template-columns:1fr 1fr}.show-card:last-child,.plan:last-child{grid-column:1/-1}.workflow-row{grid-template-columns:45px 1fr}.workflow-row p{grid-column:2}.mini-deck{display:none}.preview-wrap{margin-top:55px}}@media(max-width:600px){.container{width:calc(100% - 36px)}.section{padding:77px 0}.hero{padding:76px 0 40px}.hero h1{font-size:clamp(3.15rem,12.2vw,4.75rem)}.hero-summary{font-size:.95rem}.btn-row .btn{width:100%}.deck-body{grid-template-columns:1fr;min-height:275px}.deck-sidebar{display:none}.deck-content{padding:20px}.deck-content h3{font-size:2.25rem}.deck-chart{opacity:.34;width:63%}.deck-stamp{margin-top:19px}.deck-toolbar{gap:5px;font-size:.62rem}.show-grid,.plan-grid,.features-grid{grid-template-columns:1fr}.show-card:last-child,.plan:last-child{grid-column:auto}.feature{min-height:233px}.workflow-row{gap:10px}.workflow-row h3{font-size:1.2rem}.footer-main{flex-direction:column}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}@media(prefers-reduced-motion:no-preference){.reveal{animation:slide-in .65s both;animation-timeline:view();animation-range:entry 0% cover 23%}@keyframes slide-in{from{opacity:.65;transform:translateY(20px)}to{opacity:1;transform:none}}}
+
+/* iDeck-only motion: deck storyboard, lime chart trace, and scroll reveals. */
+@media (prefers-reduced-motion: no-preference) {
+  .preview-wrap { animation: ideckEnter 1s cubic-bezier(.2,.85,.2,1) .12s both; }
+  .mini-deck.left { animation: ideckLeft 7.4s ease-in-out infinite; }
+  .mini-deck.right { animation: ideckRight 8.2s ease-in-out infinite; }
+  .deck-chart > path { stroke-dasharray:800; animation:ideckTrace 1.8s cubic-bezier(.22,1,.36,1) .75s both; }
+  .floating-tools span { transition: transform .25s ease, background-color .25s ease; }
+  .floating-tools span:hover { transform:translateY(-4px); }
+  html.motion-io .reveal { animation:none!important; opacity:0; transform:translate3d(0,26px,0); transition:opacity .76s ease,transform .76s cubic-bezier(.22,1,.36,1); }
+  html.motion-io .reveal.in-view { opacity:1; transform:none; }
+  html.motion-io .show-grid .reveal:nth-child(2), html.motion-io .features-grid .reveal:nth-child(even) { transition-delay:.09s; }
+  @keyframes ideckEnter { from { opacity:.25; transform:translateY(32px) scale(.98); } to { opacity:1; transform:none; } }
+  @keyframes ideckLeft { 0%,100% { transform:rotate(-9deg) translateY(0); } 50% { transform:rotate(-7deg) translateY(-11px); } }
+  @keyframes ideckRight { 0%,100% { transform:rotate(9deg) translateY(0); } 50% { transform:rotate(7deg) translateY(12px); } }
+  @keyframes ideckTrace { from { stroke-dashoffset:800; } to { stroke-dashoffset:0; } }
+}
+
+/* 07. iDeck-only editorial FAQ: independent split layout, lime rules and numbered disclosure rows */
+.ideck-faq{background:radial-gradient(ellipse at 5% 60%,#b6ff000a,transparent 52%),#0b0c09;border-top:1px solid #c6ff001a;border-bottom:1px solid #c6ff001a}
+.ideck-faq-layout{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(40px,8vw,115px);align-items:start}
+.ideck-faq-intro{position:sticky;top:121px}
+.ideck-faq-intro h2{margin:22px 0 20px;max-width:490px}
+.ideck-faq-intro p{max-width:460px}
+.ideck-faq-intro .btn{margin-top:32px}
+.ideck-faq-list{border-top:1px solid #b8c89a45}
+.ideck-faq-item{border-bottom:1px solid #b8c89a45}
+.ideck-faq-item summary{display:grid;grid-template-columns:42px minmax(0,1fr) 28px;align-items:center;gap:13px;list-style:none;cursor:pointer;padding:25px 4px;font-size:clamp(1.05rem,1.55vw,1.32rem);line-height:1.35;font-weight:650;letter-spacing:-.032em}
+.ideck-faq-item summary::-webkit-details-marker{display:none}
+.ideck-faq-item summary span{color:var(--lime);font-size:.75rem;font-weight:750;letter-spacing:.05em}
+.ideck-faq-item summary b{font-size:1.4rem;color:var(--lime);font-weight:400;transition:transform .2s ease}
+.ideck-faq-item[open] summary b{transform:rotate(45deg)}
+.ideck-faq-item p{padding:0 40px 26px 59px;font-size:.95rem;max-width:610px}
+.ideck-faq-item summary:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+@media(max-width:780px){.ideck-faq-layout{grid-template-columns:1fr;gap:38px}.ideck-faq-intro{position:static}.ideck-faq-item p{padding-left:47px}}
+@media(max-width:600px){.ideck-faq-item summary{grid-template-columns:26px 1fr 20px;gap:10px;padding:21px 0;font-size:1.06rem}.ideck-faq-item p{padding:0 6px 23px 36px}}
+@media(prefers-reduced-motion:reduce){.ideck-faq-item summary b{transition:none}}
 </style></head><body><a href="#main" class="skip">Skip to content</a>
 <!-- NAVIGATION --> <header class="header"><div class="container nav-wrap"><a href="#home" class="brand"><span class="brand-mark">↗</span>MT4 Grey Label</a><nav class="nav" id="nav" aria-label="Primary navigation"><a href="#showcase">Showcase</a><a href="#features">Features</a><a href="#workflow">Workflow</a><a href="#pricing">Pricing</a></nav><div class="header-right"><a class="text-link" href="#contact">Contact</a><a class="btn btn-white" href="#contact">Get started ↗</a></div><button class="toggle" id="toggle" aria-controls="nav" aria-expanded="false" aria-label="Open menu">☰</button></div></header>
 <main id="main"><!-- HERO --> <section class="hero" id="home"><div class="container"><div class="tag"><i></i> CONNECTED BROKERAGE TECHNOLOGY · 2026</div><h1 class="hero-title">Big ambition in.<br><span class="lime">Brokerage ready</span> out.</h1><p class="hero-summary">Your trading platform is only the beginning. Bring MT4/MT5, CRM, liquidity and client workflows together in a clearer, more useful technology stack.</p><div class="btn-row"><a href="#pricing" class="btn btn-lime">Build my brokerage stack ↗</a><a href="#showcase" class="btn">Explore the setup →</a></div><div class="hero-hint"><span>MT4 &amp; MT5</span><span>Broker CRM</span><span>Custom integrations</span></div><div class="preview-wrap"><div class="main-deck" aria-label="Interactive-style brokerage workflow overview mockup"><div class="deck-toolbar"><div class="dots" aria-hidden="true"><i></i><i></i><i></i></div><strong>Brokerage workspace</strong><span>DEMO / DESIGN MOCKUP</span></div><div class="deck-body"><div class="deck-sidebar"><b>YOUR WORKSPACE</b><span class="active">▦ Dashboard</span><span>◈ Platforms</span><span>▤ Client CRM</span><span>⌁ Routing</span><span>◎ Support</span></div><div class="deck-content"><div class="deck-mini-label"><b>01 / CONNECT YOUR STACK</b><span>MT4 GREY LABEL</span></div><h3>One platform. <em>All your moving parts.</em></h3><p>A practical structure for your trading environment, client operations and execution tools.</p><span class="deck-stamp">SYSTEM ARCHITECTURE ↗</span><svg class="deck-chart" viewBox="0 0 450 130" aria-hidden="true"><g stroke="#d8ff87" opacity=".16"><path d="M0 30H450M0 70H450M0 110H450"/></g><path d="M0 114L40 105L74 108L115 79L159 90L198 56L243 65L280 40L321 59L365 30L412 40L450 7" fill="none" stroke="#c6ff00" stroke-width="4"/></svg></div></div></div><div class="mini-deck left"><b>DESIGN MODULE 01</b><strong>Trade platform setup ↗</strong></div><div class="mini-deck right"><b>DESIGN MODULE 02</b><strong>Client operations ↗</strong></div></div><div class="floating-tools" aria-label="Core service categories"><span><b>✳</b> Customize</span><span><b>◈</b> Integrate</span><span><b>?</b> Support</span><span><b>↗</b> Launch</span></div></div></section>
@@ -22,7 +59,47 @@
 <!-- FEATURES --> <section class="section" id="features"><div class="container"><div class="section-head"><span class="tag"><i></i> BUILT FOR USEFUL WORK</span><h2 style="margin-top:24px">Less complexity.<br><span class="lime">More clarity.</span></h2></div><div class="features-grid"><article class="feature reveal"><div class="feature-top"><span>01 / PLATFORM</span><strong>◈</strong></div><h3>MT4 &amp; MT5 grey label</h3><p>Choose platform arrangements based on your business model and the available licence-holder ecosystem.</p></article><article class="feature reveal"><div class="feature-top"><span>02 / OPERATIONS</span><strong>▦</strong></div><h3>Broker CRM integration</h3><p>Keep client onboarding, back office and trading-account workflows connected.</p></article><article class="feature reveal"><div class="feature-top"><span>03 / CONNECTIVITY</span><strong>⌁</strong></div><h3>Liquidity and bridge</h3><p>Scope execution and routing relationships before configuration and launch.</p></article><article class="feature reveal"><div class="feature-top"><span>04 / GROWTH</span><strong>◎</strong></div><h3>PAMM / MAM and beyond</h3><p>Review optional plugins, managed-account workflows and scale-up requirements.</p></article></div></div></section>
 <!-- WORKFLOW --> <section class="section workflow" id="workflow"><div class="container"><div class="section-head"><span class="tag"><i></i> HOW IT COMES TOGETHER</span><h2 style="margin-top:24px">Three moves.<br><span class="lime">One clear direction.</span></h2></div><div class="workflow-list"><div class="workflow-row"><span>01</span><h3>Define the requirements</h3><p>Align business objectives, client journeys, trading products and operational responsibilities.</p></div><div class="workflow-row"><span>02</span><h3>Configure and connect</h3><p>Set up agreed platform parameters, CRM integrations and essential service connections.</p></div><div class="workflow-row"><span>03</span><h3>Test and hand over</h3><p>Check readiness, documentation, support ownership and platform dependencies.</p></div></div></div></section>
 <!-- PRICING / CONFIGURATIONS --> <section class="section pricing" id="pricing"><div class="container"><div class="section-head"><span class="tag"><i></i> FLEXIBLE CONFIGURATIONS</span><h2 style="margin-top:24px">A setup that fits <span class="lime">your roadmap.</span></h2><p>Illustrative solution tiers; final pricing and availability are confirmed through a technical requirements review.</p></div><div class="plan-grid"><article class="plan"><span class="plan-label">01 / START</span><h3>Launch</h3><p>Assess your platform model, initial CRM needs and branded account structure.</p><a href="#contact" class="btn">Request scope ↗</a></article><article class="plan featured"><span class="plan-label">02 / CONNECT</span><h3>Growth</h3><p>Link your platform, client operations, routing and relevant plugins into one plan.</p><a href="#contact" class="btn btn-lime">Discuss growth ↗</a></article><article class="plan"><span class="plan-label">03 / EXPAND</span><h3>Advanced</h3><p>Address complex workflows, custom integration requirements and operational controls.</p><a href="#contact" class="btn">Plan architecture ↗</a></article></div></div></section>
+<!-- IDECK / EDITORIAL FAQ -->
+<section class="section ideck-faq" id="faq" aria-labelledby="ideck-faq-heading">
+  <div class="container ideck-faq-layout">
+    <div class="ideck-faq-intro">
+      <span class="tag"><i></i> BEFORE YOU BUILD</span>
+      <h2 id="ideck-faq-heading">The questions <span class="lime">that matter.</span></h2>
+      <p>Clear requirements make a more coherent brokerage technology stack. Here is what to confirm before you start.</p>
+      <a class="btn btn-lime" href="#contact">Discuss your requirements ↗</a>
+    </div>
+    <div class="ideck-faq-list">
+      <details class="ideck-faq-item"><summary><span>01</span>Can we plan both MT4 and MT5 platforms?<b aria-hidden="true">+</b></summary><p>Yes. We can assess both platform paths, including provider arrangements, technical prerequisites and the operating model you need. Actual access depends on participating licence holders.</p></details>
+      <details class="ideck-faq-item"><summary><span>02</span>Can our existing CRM connect to the platform?<b aria-hidden="true">+</b></summary><p>Integration is assessed against available APIs, permissions and the CRM provider's capabilities. Each client lifecycle and trading-account workflow should be validated before launch.</p></details>
+      <details class="ideck-faq-item"><summary><span>03</span>Is the illustrated dashboard a live platform?<b aria-hidden="true">+</b></summary><p>No. The workspace shown here is a design mockup explaining the proposed relationships between platform, CRM and execution systems—not a connected trading environment.</p></details>
+      <details class="ideck-faq-item"><summary><span>04</span>When is a configuration ready to launch?<b aria-hidden="true">+</b></summary><p>After the chosen provider arrangements, integrations, security controls, user journeys, operational documentation and support responsibilities have been tested and approved.</p></details>
+    </div>
+  </div>
+</section>
 <!-- FINAL CTA --> <section class="cta" id="contact"><div class="container"><span class="tag"><i></i> YOUR NEXT PROJECT STARTS HERE</span><h2>Turn your brokerage idea into <span class="lime">a connected plan.</span></h2><p>Tell us which platform and integrations your business needs. We can help translate the requirements into a practical technology scope.</p><a class="btn btn-lime" href="mailto:admin@pincodeit.com?subject=MT4%20Grey%20Label%20Project">Talk through the project ↗</a></div></section></main>
-<!-- FOOTER --> <footer class="footer"><div class="container"><div class="footer-main"><div><a href="#home" class="brand"><span class="brand-mark">↗</span>MT4 Grey Label</a><p>Forex brokerage technology and integration services. No trading or investment advice is provided.</p></div><nav class="footer-links" aria-label="Footer links"><a href="#showcase">Showcase</a><a href="#features">Features</a><a href="#pricing">Configurations</a><a href="https://ideck.webflow.io" target="_blank" rel="noopener noreferrer">Design reference</a><a href="#home">Back to top ↑</a></nav></div><div class="footer-bottom">© 2026 MT4 Grey Label · Demonstration interface, not a live trading platform.</div></div></footer>
+<!-- FOOTER --> <footer class="footer"><div class="container"><div class="footer-main"><div><a href="#home" class="brand"><span class="brand-mark">↗</span>MT4 Grey Label</a><p>Forex brokerage technology and integration services. No trading or investment advice is provided.</p></div><nav class="footer-links" aria-label="Footer links"><a href="#showcase">Showcase</a><a href="#features">Features</a><a href="#pricing">Configurations</a><a href="#faq">FAQs</a><a href="https://ideck.webflow.io" target="_blank" rel="noopener noreferrer">Design reference</a><a href="#home">Back to top ↑</a></nav></div><div class="footer-bottom">© 2026 MT4 Grey Label · Demonstration interface, not a live trading platform.</div></div></footer>
 <!-- MOBILE NAV SCRIPT --> <script>(()=>{'use strict';const b=document.getElementById('toggle'),n=document.getElementById('nav');const close=()=>{n.classList.remove('open');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open menu');b.textContent='☰'};b.addEventListener('click',()=>{const on=n.classList.toggle('open');b.setAttribute('aria-expanded',String(on));b.setAttribute('aria-label',on?'Close menu':'Open menu');b.textContent=on?'✕':'☰'});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});addEventListener('resize',()=>{if(innerWidth>780)close()})})();</script>
+
+<script>
+/* Accessible progressive scroll reveals: content stays visible when unsupported. */
+(() => {
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (reduced.matches || !('IntersectionObserver' in window)) return;
+  const items = [...document.querySelectorAll('.reveal')];
+  if (!items.length) return;
+  const observer = new IntersectionObserver(entries => {
+    for (const entry of entries) if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+      observer.unobserve(entry.target);
+    }
+  }, { threshold: .08, rootMargin: '0px 0px 35px 0px' });
+  items.forEach(item => observer.observe(item));
+  requestAnimationFrame(() => {
+    items.forEach(item => {
+      if (item.getBoundingClientRect().top < innerHeight * .96) item.classList.add('in-view');
+    });
+    document.documentElement.classList.add('motion-io');
+  });
+})();
+</script>
 </body></html>
