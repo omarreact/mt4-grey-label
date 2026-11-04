@@ -18,8 +18,8 @@ Review branch: `audit/reference-fidelity-motion-20261104`
 | `kickgent/` | https://kickgent.webflow.io/home-pages/home-v1 | Purple product-browser composition, accessible demo tabs, keyboard support, FAQ accordion and reduced-motion scroll reveals | **Reference mismatch** was material: audit described template showcase rather than Home V1; original Home V1 hero layout, image geometry, typography and movement still need direct visual comparison | **Improved**: added exact Home V1 link while preserving original template link and clarified XML target |
 | `fexiva/` | https://fexiva.webflow.io | Dark green fintech palette, custom phone mockup, floating account cards, split analytics | Reference shows a hand-held high-fidelity banking device; CSS-only stylized phone is not identical, and exact hero visual scale / image depth / typography need screenshot comparison | **Improved**: phone-stage entrance, distinct floating card motion and resilient scroll reveals |
 | `fyntic/` | https://fyntic.webflow.io | Cosmic blue palette, hand-to-orb SVG, floating technology labels and services | Vector hands and orb do not match a photographic/3D original; exact starfield, lighting, headline scale and section spacing remain unverified | **Improved**: halo movement, floating labels and resilient service reveals |
-| `ideck/` | https://ideck.webflow.io | Dark/lime identity, deck-like hero composition, editorial headings and distinct showcase | Fine-tune grid, layered deck geometry, lime emphasis, featured card spacing and motion using screenshots; currently relies on CSS view-driven animation rather than JS fallback | **Audit only** in this batch |
-| `tradenova/` | https://tradenova-site.webflow.io | Dark blue trading visual language, platform features and numbered process | Exact central 3D/market illustration, hero split/typography, chart details, section density and native GSAP-style reveal timing remain unverified; CSS view-driven animation only | **Audit only** in this batch |
+| `ideck/` | https://ideck.webflow.io | Dark/lime identity, deck-like hero composition, editorial headings and distinct showcase | Fine-tune grid, layered deck geometry, lime emphasis, featured card spacing and motion using screenshots; currently relies on CSS view-driven animation rather than JS fallback | **Improved**: independent layered-deck motion, lime chart stroke animation and resilient scroll reveals |
+| `tradenova/` | https://tradenova-site.webflow.io | Dark blue trading visual language, platform features and numbered process | Exact central 3D/market illustration, hero split/typography, chart details, section density and native GSAP-style reveal timing remain unverified; CSS view-driven animation only | **Improved**: independent market chart trace, orbital movement, floating chips and resilient scroll reveals |
 
 ## High-impact next work (ranked)
 
@@ -36,6 +36,25 @@ Review branch: `audit/reference-fidelity-motion-20261104`
 - `fyntic/index.html`: local orbital halo, floating label animations, scroll reveals, reduced-motion compliance; existing orb pulse preserved.
 - `kickgent/index.html`: direct Home V1 source link added alongside the original showcase link, without replacing it.
 - `kickgent/design-audit.xml`: explicit target Home V1 URL and caveat about source showcase audit.
+- `ideck/index.html`: independent deck entrance, rotating side decks, chart-line drawing, scroll reveals and reduced-motion fallback.
+- `tradenova/index.html`: independent market hero staging, orbit and floating cards, chart-line drawing, scroll reveals and reduced-motion fallback.
+- `scripts/validate-designs.cjs`: zero-dependency regression QA for all six design folders, references, anchors, mobile/reduced motion, and inline JavaScript parseability.
+
+## Validation of second batch
+
+Executed the committed QA script's logic against the actual GitHub branch files (all six HTML files plus their six XML audits), using a read-only virtual filesystem to run the CommonJS checker without publishing or deploying:
+
+```text
+PASS flowvy | 19 anchors | 2 local scripts | 11 IDs
+PASS kickgent | 21 anchors | 1 local scripts | 21 IDs
+PASS fexiva | 18 anchors | 2 local scripts | 10 IDs
+PASS fyntic | 22 anchors | 2 local scripts | 13 IDs
+PASS ideck | 18 anchors | 2 local scripts | 9 IDs
+PASS tradenova | 19 anchors | 2 local scripts | 12 IDs
+PASS: all six HTML folders are independent and statically valid.
+```
+
+The script itself was not run in a GitHub Actions runner and browser screenshot/interaction validation is still outstanding.
 
 All changes remain self-contained per design folder. No shared stylesheet, script, external runtime dependency, copied proprietary asset, or content rewrite was introduced.
 
