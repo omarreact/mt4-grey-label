@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <design_audit site="Kickgent" url="https://kickgent.webflow.io" type="Webflow Template" category="AI Assistant / SaaS Template Showcase">
+  <reference_home_v1>https://kickgent.webflow.io/home-pages/home-v1</reference_home_v1>
+  <!-- This baseline audited the template showcase; Home V1 still needs a true screenshot-based comparison. -->
   <meta>
     <title>Kickgent - AI Assistant Webflow Template</title>
     <description>Purple-themed modern template showcasing AI assistant product. Dark purple gradients, mockup browsers/windows, clean SaaS UI.</description>
