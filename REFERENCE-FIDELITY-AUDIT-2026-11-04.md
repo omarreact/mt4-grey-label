@@ -75,3 +75,23 @@ All changes remain self-contained per design folder. No shared stylesheet, scrip
 | Deployed-page smoke tests | NOT RUN — review branch not deployed |
 
 **Deployment**: none. Do not merge the branch or deploy to Vercel without separate approval. Keep the current `main` and GitHub Pages site as rollback baselines.
+
+## Follow-up after six exact reference links (2026-11-04)
+
+User-confirmed root URLs, in order:
+1. https://tradenova-site.webflow.io
+2. https://fyntic.webflow.io
+3. https://fexiva.webflow.io
+4. https://ideck.webflow.io
+5. https://kickgent.webflow.io
+6. https://flowvy-template.webflow.io
+
+All six live reference screenshot requests returned `status: ready`, as did the six GitHub Pages `main` baseline screenshots, via a public screenshot service. They are indexed side-by-side in [VISUAL-REFERENCE-COMPARISON.md](VISUAL-REFERENCE-COMPARISON.md). **The screenshot bitmaps were not visually analyzed and do not prove parity.** Browser page extraction failed through the available web reader, so no computed style/layout measurements should be claimed.
+
+Documented source structure also confirmed that the iDeck and TradeNova templates have FAQ sections, while their existing standalone HTML pages did not. The following high-impact safe additions were implemented independently:
+
+- `ideck/index.html`: black/lime editorial numbered FAQs, four native `details/summary` items, responsive two-column layout, contact CTA, footer anchor. No external dependency or shared styles.
+- `tradenova/index.html`: separate dark-blue trading-theme FAQ card grid, four native `details/summary` items, contact rail, footer anchor. No external dependency or shared styles.
+- `VISUAL-REFERENCE-COMPARISON.md`: exact six-source mapping, paired public 1200×2000 screenshot URLs, explicit production-vs-unmerged-branch caveat, and outstanding QA gates.
+
+After these changes, the committed standalone QA validator again passed all six files: iDeck has 20 valid internal anchors and 11 IDs; TradeNova has 20 valid internal anchors and 14 IDs. No IDs duplicated, no broken anchors, all inline scripts parsed. This was a read-only virtual filesystem execution of the actual committed Node validator and source files, not a CI run. No branch preview deployment, actual browser interaction tests, or pixel comparison has been completed.
