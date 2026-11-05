@@ -11,4 +11,6 @@
 
 ## Current implementation note
 
-`kickgent/index.html` has been fully replaced. It is now a Home V1 reconstruction with light-ray hero, layered dashboard mockup, logo rail, social proof, coverage cards, interactive feature and audience panels, comparison table, stack orbit graphic and CTA. It still needs an actual local desktop/mobile rendering comparison.
+`kickgent/index.html` has been corrected and is ready for the next milestone. It now includes a Home V1 light-ray hero, layered dashboard mockup, logo rail, social proof, coverage cards, interactive feature and audience panels, MT4/MT5 comparison, five-step process, Grey Label/White Label comparison, single approved FAQ set, stack orbit graphic and CTA. Its mobile menu is keyboard-operable and all contact mailto links use `admin@pincodeit.com`.
+
+The next task is Fexiva. Its actual reference uses a bright teal-to-near-black hero, a floating dark navigation bar, a hand-held mobile finance dashboard, an oversized pale dashboard card, logo rail, editorial image/stat blocks, large feature cards and tabbed finance panels. Do not turn it into a generic green card-grid page.

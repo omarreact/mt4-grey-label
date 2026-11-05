@@ -1,46 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<design_audit site="Kickgent" url="https://kickgent.webflow.io" type="Webflow Template" category="AI Assistant / SaaS Template Showcase">
+<design_audit site="Kickgent Home V1" url="https://kickgent.webflow.io/home-pages/home-v1" type="Webflow homepage" category="AI assistant / SaaS">
   <meta>
-    <title>Kickgent - AI Assistant Webflow Template</title>
-    <description>Purple-themed modern template showcasing AI assistant product. Dark purple gradients, mockup browsers/windows, clean SaaS UI.</description>
-    <theme>Dark Purple</theme>
+    <title>Kickgent - AI Assistant &amp; SaaS Webflow Template — Home V1</title>
+    <reference_scope>Home V1 only; this is not the Kickgent template showcase landing page.</reference_scope>
+    <theme>Near-black violet, layered transparent UI, purple light columns and rounded product widgets</theme>
+    <primary_font>Modern geometric sans-serif</primary_font>
   </meta>
-
   <design_system>
     <colors>
-      <color name="primary-purple" value="#8B5CF6 / vibrant purple" usage="CTAs, accents, logo, gradients"/>
-      <color name="bg" value="Deep purple-black with vertical gradient bars"/>
-      <color name="text" value="white"/>
-      <color name="secondary-button" value="dark translucent"/>
+      <color name="background" value="#100414" usage="Near-black purple page ground"/>
+      <color name="violet" value="#9448f7" usage="Buttons, glow and active elements"/>
+      <color name="lilac" value="#d7aaff" usage="Borders and highlights"/>
+      <color name="surface" value="#24102f" usage="Translucent product panels"/>
     </colors>
-    <typography>
-      <font_family>Modern sans, bold large headings</font_family>
-      <headings>"AI Assistant Webflow Template." large centered white</headings>
-    </typography>
     <effects>
-      <background>Vertical purple gradient stripes or light rays</background>
-      <mockups>Browser/window mockups of the AI dashboard UI with purple accents</mockups>
+      <effect name="hero-light-columns">Tall translucent purple columns rise from a luminous lower horizon.</effect>
+      <effect name="orbital-lines">Large fine circular arcs frame the hero widgets.</effect>
+      <effect name="glass-panels">Dashboard, progress and files panels use muted transparency, borders and blur.</effect>
     </effects>
   </design_system>
-
   <sections>
     <section name="Navigation">
-      <description>Logo (purple geometric + Kickgent) left. Links: Home, Demo, Inner Page, Utility. Right purple-outlined "Purchase Template".</description>
+      <description>Logo left; centered Home, About, Blog, Pages and Pricing links; cart and bordered Get Template button right. Mobile navigation collapses into a closable menu.</description>
     </section>
-
     <section name="Hero">
-      <description>Centered large heading. Dual CTAs: solid purple "Purchase Template" + dark "View All Templates →". Below: two overlapping browser mockups showing the AI Assistant dashboard (chat, automation progress, recent activity, etc.) with purple UI elements.</description>
+      <description>Badge above a large centred headline, two CTAs, a central assistant panel, a progress panel, file panel and floating circular feature icons over purple rising light columns.</description>
     </section>
-
+    <section name="Logo rail">
+      <description>Headline followed by a continuously repeating monochrome partner-logo rail.</description>
+    </section>
+    <section name="Trust and metrics">
+      <description>Reviewer avatars and rating pair with short brand statement, category tags and four animated metric blocks.</description>
+    </section>
+    <section name="Coverage">
+      <description>Five icon-led cards describe the areas the assistant can help with.</description>
+    </section>
     <section name="Features">
-      <description>Demo sections, inner pages showcase, utility pages, full template features with consistent purple theme.</description>
+      <description>Feature-led panels with product illustrations, using active-state interaction rather than a generic card grid.</description>
+    </section>
+    <section name="Role tools">
+      <description>Role-oriented content navigation and a rich product panel.</description>
+    </section>
+    <section name="Plans and integrations">
+      <description>Plan and integration presentation areas maintain the same violet product-system styling.</description>
+    </section>
+    <section name="CTA and footer">
+      <description>High-impact purple CTA, newsletter/footer links and dark ground.</description>
     </section>
   </sections>
-
-  <recreation_notes>
-    - Vibrant purple as primary.
-    - Dark purple gradient backgrounds.
-    - High-quality dashboard mockups.
-    - Clean, modern AI product presentation style.
-  </recreation_notes>
+  <responsive_notes>
+    <desktop>Wide hero keeps light columns and overlapping product widgets at the centre.</desktop>
+    <mobile>Navigation becomes an explicit keyboard-operable drawer; widgets scale and stack without horizontal overflow.</mobile>
+    <motion>Animation is decorative only and must respect prefers-reduced-motion.</motion>
+  </responsive_notes>
+  <adaptation_notes>
+    <note>Reference hierarchy and visual language are retained while text is replaced with approved MT4 &amp; MT5 Grey Label homepage content.</note>
+    <note>Reference template copy, vendor names and template-purchase CTAs are not carried into the brokerage page.</note>
+  </adaptation_notes>
 </design_audit>
