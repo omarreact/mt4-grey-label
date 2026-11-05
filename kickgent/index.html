@@ -40,6 +40,11 @@ body{background:radial-gradient(circle at 14% 16%,#934cff1f,transparent 21%),rad
 @media(max-width:850px){.nav .wrap{height:62px;margin-top:7px;padding:0 13px;border-radius:14px}.links{top:64px}.nav .wrap:after{left:8%;right:8%}}@media(max-width:540px){.nav .wrap{height:58px;margin-top:6px;border-radius:13px}.links{top:59px}}
 @supports not ((backdrop-filter:blur(2px)) or (-webkit-backdrop-filter:blur(2px))){.nav .wrap,.window,.progress,.files,.metric,.card,.feature-copy,.tool-box,.step,.table-wrap{background-color:#2a1039}}
 </style>
+<style>
+/* Ten real Unsplash stock photos, embedded as low-impact editorial texture. */
+.card .stock-photo,.step .stock-photo{position:absolute;z-index:0;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32;filter:saturate(.82) contrast(1.05) brightness(.58);transition:opacity .35s ease,transform .55s ease;pointer-events:none}.card:before,.step:before{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(155deg,#16051de8 5%,#1b0822b8 52%,#4a176d95);pointer-events:none}.card>*,.step>*{position:relative;z-index:2}.card:after{z-index:0}.card:hover .stock-photo,.step:hover .stock-photo{opacity:.48;transform:scale(1.06)}
+@media(prefers-reduced-motion:reduce){.card .stock-photo,.step .stock-photo{transition:none!important}.card:hover .stock-photo,.step:hover .stock-photo{transform:none}}
+</style>
 </head>
 <body>
 <div class="scroll-line" aria-hidden="true"></div>
@@ -66,5 +71,6 @@ document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelect
 const personas={"New brokers":"Founders launching their first brokerage who need a platform, CRM and website working together from day one, without building any of it in house.","Existing brokers":"Brokers who want to add MT5, bring in PAMM and MAM tools, improve liquidity connections or replace a CRM that is holding them back.","Scaling brokerages":"Growing firms that need more capacity, more payment options, more markets or a move toward white label as volume rises."};document.querySelectorAll('.tool-nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tool-nav button').forEach(x=>x.classList.remove('active'));b.classList.add('active');tooltitle.textContent=b.dataset.tool;toolcopy.textContent=personas[b.dataset.tool]});
 const heroUi=document.querySelector('.hero-ui');heroUi.insertAdjacentHTML('afterbegin','<div class="runtime" aria-hidden="true">Workflow <b>aligned</b></div>');
 const scrollLine=document.querySelector('.scroll-line');const updateScrollLine=()=>{const max=document.documentElement.scrollHeight-innerHeight;scrollLine.style.transform=`scaleX(${max>0?scrollY/max:0})`};addEventListener('scroll',updateScrollLine,{passive:true});updateScrollLine();
+const stockPhotos=[['1522202176988-66273c2fd55f','center'],['1517245386807-bb43f82c33c4','center'],['1551836022-d5d88e9218df','center'],['1556761175-b413da4baf72','center'],['1552664730-d307ca884978','center'],['1553877522-43269d4ea984','center'],['1516321318423-f06f85e504b3','center'],['1516321165247-4aa89a48be28','center'],['1497366754035-f200968a6e72','center'],['1556157382-97eda2d62296','center']];document.querySelectorAll('.cards .card,.steps .step').forEach((panel,index)=>{const [id,position]=stockPhotos[index];const image=new Image();image.className='stock-photo';image.alt='';image.loading=index<3?'eager':'lazy';image.decoding='async';image.style.objectPosition=position;image.src=`https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=1000&q=75`;panel.prepend(image)});
 </script>
 </body></html>
