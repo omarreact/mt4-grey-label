@@ -12,6 +12,7 @@ Branch: `rebuild/reference-homepages-20261105`
 - Replaced the placeholder contact address with `admin@pincodeit.com`.
 - Updated `kickgent/design-audit.xml` to document Home V1, rather than the template showcase.
 - Added `prefers-reduced-motion` handling for scroll, rail animation, transitions and reveal states.
+- Enhanced the approved Kickgent layout with a non-content-changing motion layer: hero orbit and widget float states, workflow status chip, FAQ reveal, interactive card/step feedback and a scroll-position line. The additions are disabled for reduced-motion preferences.
 - Kept HTML, CSS, and JavaScript entirely inside Kickgent's standalone `index.html`.
 
 ## Verified
@@ -19,6 +20,7 @@ Branch: `rebuild/reference-homepages-20261105`
 - Source is present and the working tree has no whitespace errors from `git diff --check`.
 - The live Kickgent Home V1 desktop hero was compared again after correction: centered navigation, dark-violet canvas, light columns, orbit lines and layered assistant widgets remain the design basis.
 - Static responsive review covers the 850px and 540px layout transitions, mobile navigation behavior, all required section IDs, contact address and reduced-motion rules.
+- The current GitHub Pages Kickgent hero was reviewed in a browser before the enhancement; its existing hierarchy and visual balance were kept as the basis for the new motion layer.
 
 ## Not yet verified
 

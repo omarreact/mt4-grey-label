@@ -13,4 +13,6 @@
 
 `kickgent/index.html` has been corrected and is ready for the next milestone. It now includes a Home V1 light-ray hero, layered dashboard mockup, logo rail, social proof, coverage cards, interactive feature and audience panels, MT4/MT5 comparison, five-step process, Grey Label/White Label comparison, single approved FAQ set, stack orbit graphic and CTA. Its mobile menu is keyboard-operable and all contact mailto links use `admin@pincodeit.com`.
 
+The same Kickgent layout also has a completed optional motion layer: an animated hero orbit and widgets, a decorative workflow chip, FAQ reveal, card/step feedback and a scroll line. All of this is switched off when reduced motion is requested. Do not replace the existing layout or approved content when making further Kickgent changes.
+
 Fexiva is now partially rebuilt. Its actual reference uses a bright teal-to-near-black hero, floating dark navigation, a hand-held mobile finance dashboard, an oversized pale dashboard card and logo rail; these areas have been applied. Next, complete its editorial image/stat area, asymmetric benefits, tabbed feature content, pricing toggle, testimonial/article/FAQ/app CTA and footer in the same reference language. Do not turn it into a generic green card-grid page.
