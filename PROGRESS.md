@@ -27,7 +27,8 @@ Branch: `rebuild/reference-homepages-20261105`
 
 ## Remaining
 
-1. Capture and compare desktop/mobile references for Fexiva, Fyntic, iDeck, TradeNova and Flowvy.
-2. Rebuild Fexiva next in its own standalone folder, then checkpoint it.
+1. Fexiva is in progress: its floating navigation, three-part teal hero, phone/account-panel composition, proof cluster and trust rail have been rebuilt against the live reference. Its editorial/about, asymmetric benefit, tabs, pricing, testimonial, article and footer structure still need a full reference pass.
+2. Capture and compare desktop/mobile references for Fyntic, iDeck, TradeNova and Flowvy.
+3. Complete Fexiva, checkpoint it, then proceed to Fyntic.
 3. Repeat source, desktop/mobile, and structure checks after each page.
 4. Do not merge to `main` or deploy without approval.

@@ -1,59 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<design_audit site="Fexiva" url="https://fexiva.webflow.io" type="Webflow Template" category="Finance / Fintech App">
-  <meta>
-    <title>Fexiva - Finance Webflow Template</title>
-    <description>Modern finance/fintech template with green accent theme, mobile app mockups, clean professional UI for expense tracking, payments, business finance.</description>
-    <theme>Dark with Green accents</theme>
-    <page_height_approx>10947px</page_height_approx>
-  </meta>
-
-  <design_system>
-    <colors>
-      <color name="primary-green" value="Teal/Green gradient (#00something to darker)" usage="Hero bg gradient, accents, CTAs"/>
-      <color name="bg-dark" value="Near black / deep green-black" usage="Overall bg"/>
-      <color name="card-bg" value="Dark translucent / glass" usage="UI cards, phone mockup elements"/>
-      <color name="text-white" value="#ffffff"/>
-      <color name="accent" value="Bright teal/cyan for highlights, balances, icons"/>
-      <color name="muted" value="Grayish for secondary text"/>
-    </colors>
-    <typography>
-      <font_family>Clean modern sans-serif (Inter or similar)</font_family>
-      <headings>Large bold white headings, e.g. "Finance Built For Modern Businesses."</headings>
-      <body>Readable white/muted on dark</body>
-    </typography>
-    <effects>
-      <gradients>Strong green radial/linear gradient on hero</gradients>
-      <mockups>High-fidelity smartphone UI mockups showing app screens (balance, cards, transactions, quick actions)</mockups>
-      <glass>Frosted glass cards and overlays</glass>
-    </effects>
-  </design_system>
-
-  <sections>
-    <section name="Navigation">
-      <description>Centered or top: Logo (Fexiva with lightning bolt icon) in dark pill, menu links (Home, About, Features, Pricing, Blog), right "Get started" pill button with green accent.</description>
-    </section>
-
-    <section name="Hero">
-      <description>Green gradient bg. Left: Large white heading "Finance Built For Modern Businesses.", subtext about managing expenses, "Get started" button, avatar group "OK Satisfied Users". Center/right: Hand holding smartphone showing detailed finance app UI (balance $24,650.00, cards, transactions list, quick actions icons, overview cards). Floating UI cards on sides for total balance, actions.</description>
-      <key_visual>Realistic phone mockup with dark UI, green accents on positive numbers, icons.</key_visual>
-    </section>
-
-    <section name="Features / Benefits">
-      <description>Sections showcasing app features: expense tracking, cards management, analytics, transfers etc. with icons, screenshots, descriptions. Card-based or split layouts.</description>
-    </section>
-
-    <section name="Additional">
-      <description>Pricing, testimonials, blog, CTA sections, consistent green accents on dark.</description>
-    </section>
-
-    <section name="Footer">Standard dark footer.</section>
-  </sections>
-
-  <recreation_notes>
-    - Dominant green/teal gradient hero.
-    - High quality mobile app mockups as central visual.
-    - Dark theme with glassmorphism cards.
-    - Clean, modern fintech aesthetic focused on clarity and trust.
-    - Extract exact greens and fonts from live DevTools for pixel match.
-  </recreation_notes>
+<design_audit site="Fexiva" url="https://fexiva.webflow.io/" type="Webflow finance homepage" category="Fintech SaaS">
+  <meta><theme>Bright teal through forest-black, pale mint account surfaces, rounded dark cards</theme><primary_font>Large neutral sans-serif display with compact interface text</primary_font></meta>
+  <reference_structure>
+    <section name="Floating navigation">Dark narrow rounded navigation pill over the teal hero; compact white round mark at left and a bordered green CTA at right.</section>
+    <section name="Three-part hero">Huge left-aligned headline and CTA; hand-held finance phone centred; pale total-balance/quick-actions panel on the right; profile arc and satisfaction count below the left copy.</section>
+    <section name="Trust rail">Partner statement, review cluster and repeating logo rail on dark ground.</section>
+    <section name="Editorial about">Large heading, established-year detail, paired image/stat blocks and a balance of whitespace.</section>
+    <section name="Benefits">Asymmetric finance feature panels with product graphics and card/debit-card imagery.</section>
+    <section name="Tabbed product feature">Four tabs above a detailed product panel, onboarding bullets and a dashboard chart.</section>
+    <section name="Integrations and pricing">Integration statement followed by monthly/yearly pricing toggle and three plans.</section>
+    <section name="Testimonials, articles, FAQ, app CTA and footer">Review carousel, editorial articles, tabbed help content, phone/QR visual CTA and large multi-column footer.</section>
+  </reference_structure>
+  <adaptation_rules>
+    <rule>Use the approved MT4 &amp; MT5 Grey Label copy in place of Fexiva banking copy.</rule>
+    <rule>Preserve Fexiva's teal finance composition, information density and responsive stacked mobile order.</rule>
+    <rule>Keep all HTML, CSS and JavaScript self-contained inside fexiva/index.html.</rule>
+  </adaptation_rules>
+  <responsive_notes><desktop>Hero is explicitly three-column with overlapping phone and pale account panel.</desktop><mobile>Floating navigation becomes menu-driven; hero text, phone and account panel stack without clipping.</mobile><motion>Use subtle reveal/hover motion only and honour prefers-reduced-motion.</motion></responsive_notes>
 </design_audit>
