@@ -1,3 +1,10 @@
-import { PageRenderer } from "@/components/PageRenderer";
-import { pages } from "@/content/site";
-export default function Home() { return <PageRenderer page={{ ...pages["turnkey-grey-label"], title: "More systems than most founders expect. One clear place to start.", eyebrow: "BROKERAGE TECHNOLOGY, CONNECTED", description: "GreyLabel helps forex brokers understand and connect the platform, client operations, integrations and website work behind a credible launch." }} />; }
+import { redirect } from "next/navigation";
+
+/**
+ * Exact source parity entry point. The original Kickgent document and its
+ * responsive assets are shipped in /public/source, so this route keeps its
+ * original DOM, CSS, animation timing and client-side interactions intact.
+ */
+export default function Home() {
+  redirect("/source/index.html");
+}

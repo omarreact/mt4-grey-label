@@ -9,6 +9,7 @@
     "lint": "next lint",
     "validate": "node scripts/validate-theme.mjs",
     "generate:wordpress": "node scripts/generate-wordpress-theme.mjs",
+    "sync:source": "node scripts/sync-source.mjs",
     "check": "npm run validate && npx tsc --noEmit && npm run build"
   },
   "dependencies": {
