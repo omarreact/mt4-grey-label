@@ -523,10 +523,33 @@ body{line-height:1.6}p,li,td,.tab small{line-height:1.6}h1,h2,h3{color:var(--hea
 }
 
 </style>
+<style id="kickgent-submenus-20261106">
+/* Grouped page navigation, shared with the detail-page information hierarchy. */
+#mobile-menu{align-items:center;gap:22px}
+#mobile-menu .nav-dropdown{position:relative}
+#mobile-menu .nav-dropdown>button{display:flex;align-items:center;gap:7px;min-height:44px;padding:8px 0;border:0;background:transparent;color:#422651;font:inherit;cursor:pointer}
+#mobile-menu .nav-dropdown>button::after{content:"⌄"}
+#mobile-menu .dropdown-panel{position:absolute;top:100%;left:50%;display:none;min-width:260px;padding:10px;border:1px solid #dfc9e9;border-radius:14px;background:#fffaff;box-shadow:0 18px 46px #37144e31;transform:translateX(-50%)}
+#mobile-menu .nav-dropdown.open>.dropdown-panel{display:grid}
+#mobile-menu .dropdown-panel a{display:flex;align-items:center;min-height:44px;padding:10px 13px;border:0;border-radius:8px;color:#493058;font-size:.85rem}
+#mobile-menu .dropdown-panel a:hover{background:#f2e4fb;color:#612391}
+@media(max-width:850px){
+#mobile-menu{align-items:stretch;gap:0}
+#mobile-menu .nav-close{align-self:flex-end}
+#mobile-menu .nav-dropdown>button{width:100%;justify-content:space-between;min-height:48px;border-bottom:1px solid #d9b5e8;text-align:left}
+#mobile-menu .dropdown-panel{position:static;min-width:0;padding:4px 0 8px 13px;border:0;border-left:2px solid #d9b5e8;border-radius:0;background:transparent;box-shadow:none;transform:none}
+}
+</style>
 </head>
 <body>
 <div class="scroll-line" aria-hidden="true"></div>
-<header class="nav"><div class="wrap"><a class="brand" href="#top"><span class="mark"></span>GreyLabel</a><nav class="links" id="mobile-menu" aria-label="Primary navigation"><button class="nav-close" type="button" aria-label="Close navigation">Close ×</button><a href="#top">Home</a><a href="#systems">Solutions</a><a href="#explore-pages">All 11 pages</a><a href="#tools">Technology</a><a href="how-to-start-forex-brokerage/">Guides</a><a href="about/">About</a><a href="#contact">Contact</a></nav><div class="navend"><span class="cart">◌</span><a class="btn ghost" href="mailto:admin@pincodeit.com?subject=MT4%20and%20MT5%20Grey%20Label%20Enquiry">Get Started</a></div><button class="menu" id="nav-toggle" type="button" aria-label="Open navigation" aria-controls="mobile-menu" aria-expanded="false">☰</button></div></header>
+<header class="nav"><div class="wrap"><a class="brand" href="#top"><span class="mark"></span>GreyLabel</a><nav class="links" id="mobile-menu" aria-label="Primary navigation"><button class="nav-close" type="button" aria-label="Close navigation">Close ×</button>
+<a href="#top">Home</a>
+<div class="nav-dropdown"><button type="button" aria-expanded="false" aria-controls="nav-solutions">Solutions</button><div id="nav-solutions" class="dropdown-panel"><a href="mt4-grey-label/">MT4 Grey Label</a><a href="mt5-grey-label/">MT5 Grey Label</a><a href="forex-broker-crm/">Forex Broker CRM</a><a href="pamm-mam/">PAMM &amp; MAM Plugins</a><a href="forex-liquidity-bridge/">Liquidity &amp; Bridge</a><a href="forex-broker-website/">Broker Website</a></div></div>
+<div class="nav-dropdown"><button type="button" aria-expanded="false" aria-controls="nav-guides">Guides</button><div id="nav-guides" class="dropdown-panel"><a href="how-to-start-forex-brokerage/">Start a Brokerage</a><a href="scale-forex-brokerage/">Scale Your Brokerage</a><a href="turnkey-grey-label/">Turnkey Brokerage</a></div></div>
+<a href="about/">About</a>
+<a href="#contact">Contact</a>
+</nav><div class="navend"><span class="cart">◌</span><a class="btn ghost" href="mailto:admin@pincodeit.com?subject=MT4%20and%20MT5%20Grey%20Label%20Enquiry">Get Started</a></div><button class="menu" id="nav-toggle" type="button" aria-label="Open navigation" aria-controls="mobile-menu" aria-expanded="false">☰</button></div></header>
 <main id="top">
 <section class="hero"><div class="hero-copy" data-reveal><span class="pill">MT4 &amp; MT5 brokerage technology</span><h1>Launch a brokerage.<br><em>Connect every system.</em></h1><p>MT4 and MT5 grey label, CRM, PAMM and MAM plugins, liquidity connectivity and broker websites, brought together by one technology partner.</p><div class="actions"><a class="btn" href="#systems">Explore solutions →</a><a class="btn ghost" href="#tools">See how it works →</a></div></div><div class="hero-ui" aria-label="Illustrative brokerage workspace"><div class="orbit"></div><div class="orb r">✦</div><div class="orb l">✉</div><div class="progress"><label>Brokerage launch</label><div class="gauge"></div></div><div class="window"><div class="notch"></div><div class="wtop"><span class="bubble">☰</span><span>BrokerOS Assistant</span><span class="bubble">✎</span></div><strong>Ready to launch.</strong><small>What would you like to connect?</small><div class="mini-options"><span>MT5 setup</span><span>CRM workflow</span></div></div><div class="files"><label>Connected systems</label><div class="file">↗ Client onboarding</div><div class="file">↗ PAMM / MAM</div><div class="file">↗ Liquidity bridge</div></div><div class="spark">✧</div></div></section>
 <section class="rail-section"><div class="wrap"><h2>The technology foundation behind modern forex brokerages</h2></div><div class="rail"><span class="logo">META<i>TRADER</i></span><span class="logo">Broker<i>CRM</i></span><span class="logo">PAMM <i>MAM</i></span><span class="logo">Liquidity<i>Bridge</i></span><span class="logo">Client<i>Portal</i></span><span class="logo">Broker<i>Website</i></span><span class="logo">META<i>TRADER</i></span><span class="logo">Broker<i>CRM</i></span><span class="logo">PAMM <i>MAM</i></span><span class="logo">Liquidity<i>Bridge</i></span></div></section>
@@ -623,5 +646,17 @@ const editorialPhotos=[['.hero','1556761175-4b46a572b786','center 46%'],['.intro
   );
 })();
 
+</script>
+<script id="kickgent-submenu-controls">
+(()=>{
+const nav=document.querySelector('#mobile-menu');
+const groups=[...nav.querySelectorAll('.nav-dropdown')];
+function closeGroups(){groups.forEach(g=>{g.classList.remove('open');g.querySelector('button').setAttribute('aria-expanded','false')})}
+groups.forEach(g=>{const button=g.querySelector('button');button.addEventListener('click',()=>{const open=g.classList.contains('open');closeGroups();if(!open){g.classList.add('open');button.setAttribute('aria-expanded','true')}});g.addEventListener('keydown',e=>{if(e.key==='Escape'){e.stopPropagation();closeGroups();button.focus()}})});
+document.addEventListener('pointerdown',e=>{if(!nav.contains(e.target))closeGroups()});
+nav.querySelectorAll('a,.nav-close').forEach(a=>a.addEventListener('click',closeGroups));
+document.querySelector('#nav-toggle').addEventListener('click',closeGroups);
+addEventListener('resize',closeGroups);
+})();
 </script>
 </body></html>
